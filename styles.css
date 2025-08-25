@@ -36,3 +36,33 @@ h2{font-size:28px;margin:0 0 16px}
 .site-footer{border-top:1px solid var(--line);padding:24px 0;background:var(--surface);color:var(--muted);margin-top:40px}
 @media (max-width:960px){.hero-grid{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){h1{font-size:32px}.grid-3{grid-template-columns:1fr}}
+/* --- Desktop polish --- */
+section, .section { scroll-margin-top: 84px; } /* якоря не уходят под липкий хедер */
+
+@media (min-width: 1024px){
+  .container{ max-width: 1200px; }
+
+  .nav{ height: 72px; }
+  .menu a{
+    font-size: 14px;
+    padding: 8px 10px;
+    white-space: nowrap;   /* меньше переносов меню */
+  }
+
+  .hero{ padding: 80px 0; }
+  .hero-grid{
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .hero h1{ font-size: 44px; }
+  .subtitle{ font-size: 18px; }
+
+  .hero-photo img{
+    max-height: 560px;     /* ограничиваем рост фото */
+    object-fit: cover;
+  }
+}
+
+/* чуть контраста кнопкам и тексту на больших экранах */
+.btn.primary { box-shadow: 0 6px 18px rgba(11,58,120,.10); }
+.subtitle { color: #3b556e; }
