@@ -5,15 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Доктор Зданович — Мир благополучия</title>
   <meta name="description" content="Алексей Анатольевич Зданович — врач-психиатр, психотерапевт, сексолог, супервизор, к.м.н. «Через тернии к людям».">
-  <!-- Шрифты и иконки можно вернуть позже; для отладки фото их опустим -->
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="styles.css?v=7" />
 </head>
 <body>
 
 <header class="site-header">
   <div class="container nav">
-    <a href="#hero" class="brand">Доктор&nbsp;Зданович</a>
-    <button class="nav-toggle" aria-label="Открыть меню" aria-expanded="false">≡</button>
+    <!-- Премиальный “логотип” -->
+    <a href="#hero" class="brand" aria-label="Доктор Зданович">Доктор&nbsp;Зданович</a>
+
+    <button class="nav-toggle" aria-label="Открыть меню" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
     <nav class="menu">
       <a href="#about">Обо мне</a>
       <a href="#services">Услуги</a>
@@ -24,77 +33,115 @@
 </header>
 
 <section class="hero" id="hero">
+  <div class="bg"></div>
+  <div class="bg-shapes"></div>
   <div class="container hero-inner">
     <div class="copy">
-      <h1>Алексей Анатольевич Зданович</h1>
-      <p class="lead">«Через тернии к людям» — врач-психиатр, психотерапевт, сексолог, супервизор, к.м.н.</p>
+      <div class="eyebrow">Мир благополучия</div>
+      <h1>Алексей Анатольевич Зданович<br><span class="deviz">«Через тернии к людям»</span></h1>
+      <p class="lead">Врач-психиатр, психотерапевт, сексолог, супервизор, к.м.н.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i> Записаться в Telegram</a>
+        <a class="btn btn-ghost" href="https://www.b17.ru/doctorzdanovich/" target="_blank" rel="noopener"><i class="fa-solid fa-notes-medical"></i> Профиль B17</a>
+      </div>
+      <ul class="chips">
+        <li><i class="fa-solid fa-user-doctor"></i> 30+ лет практики</li>
+        <li><i class="fa-solid fa-video"></i> Онлайн и очно</li>
+        <li><i class="fa-solid fa-stethoscope"></i> Супервизии</li>
+      </ul>
     </div>
     <div class="photo frame">
-      <!-- 1) Основной путь — из корня репо
-           2) onerror: пробуем альтернативы (/hero.jpg, ./hero.jpeg, /hero.jpeg) -->
-      <img id="heroImg" src="./hero.jpg?v=6" alt="А.А. Зданович" loading="lazy" />
+      <!-- Реальные фото из корня репозитория -->
+      <img id="heroImg" src="./hero.jpg?v=7" alt="А.А. Зданович" loading="lazy" />
     </div>
   </div>
+  <a href="#about" class="scroll-down" aria-label="Листать вниз"><i class="fa-solid fa-chevron-down"></i></a>
 </section>
 
 <section id="about" class="section alt">
   <div class="container grid-2">
     <div class="photo-card frame">
-      <img id="aboutImg" src="./about.jpg?v=6" alt="А.А. Зданович" loading="lazy" />
+      <img id="aboutImg" src="./about.jpg?v=7" alt="А.А. Зданович" loading="lazy" />
     </div>
     <div>
       <h2>Обо мне</h2>
-      <p>Врач-психиатр, психотерапевт, сексолог, супервизор, Кандидат медицинских наук. Более 30 лет опыта.</p>
-      <p>Образование: Кемеровский ГМИ («лечебное дело», с 1985 г.), НГИУВ («психотерапия», 1992–1997), повышение квалификации по «Психотерапии» (с 2000 г.) по специальностям «Психиатрия», «Сексология», «Психоаналитическое консультирование и психоаналитическая психотерапия».</p>
-      <p>Использую сочетание КПТ и аналитической психотерапии, терапию, фокусированную на переносе; также коучинг и гипнотерапию.</p>
+      <p class="muted">Врач-психиатр, психотерапевт, сексолог, супервизор, Кандидат медицинских наук. Более 30 лет опыта.</p>
+      <p>Образование: Кемеровский государственный медицинский институт, специальность «лечебное дело» с 1985 г. (40 лет), Новокузнецкий государственный ордена Трудового Красного Знамени институт усовершенствования врачей, специальность «психотерапия» 1992–1997 гг., Повышение квалификации «Психотерапия», на базе «Новокузнецкого государственного института усовершенствования врачей», по специальностям «Психиатрия», «Сексология», «Психоаналитическое консультирование и психоаналитическая психотерапия» с 2000 г. (25 лет)</p>
+      <p>Использую наиболее эффективное сочетание когнитивно-поведенческой и аналитической психотерапий и терапию, фокусированную на переносе. Применяю также коучинг и гипнотерапию.</p>
+      <ul class="badges">
+        <li><i class="fa-solid fa-heart-pulse"></i> Индивидуально и семейно</li>
+        <li><i class="fa-solid fa-laptop-medical"></i> Очно и онлайн</li>
+        <li><i class="fa-solid fa-user-check"></i> Супервизии</li>
+      </ul>
     </div>
   </div>
+  <div class="section-sep"></div>
 </section>
 
 <section id="services" class="section">
   <div class="container">
     <h2>Услуги</h2>
-    <ul>
-      <li>Индивидуальные консультации: кризис, тревога, фобии, депрессии, сон, психосоматика, сексуальность, отношения, зависимости, самооценка, непринятие себя.</li>
-      <li>Семейное консультирование: конфликты, супружеская терапия, сексуальная сфера, воспитание детей, подростковые вопросы.</li>
-      <li>Психологические группы.</li>
-      <li>Чекап душевного состояния: профилактика, «зоны риска», карта состояния.</li>
-      <li>Тюнинг личности: эффективность, стрессоустойчивость, уверенность.</li>
-      <li>Апгрейд личности и «псипутешествия».</li>
-    </ul>
+    <div class="cards">
+      <article class="card"><div class="icon"><i class="fa-solid fa-user-doctor"></i></div><h3>Индивидуальные консультации</h3><p>Кризисы, тревожные состояния, фобии, депрессии, нарушения сна, психосоматика, сексуальность, отношения, зависимости, самооценка, непринятие себя.</p></article>
+      <article class="card"><div class="icon"><i class="fa-solid fa-people-roof"></i></div><h3>Семейное консультирование</h3><p>Конфликты, супружеская терапия, проблемы в сексуальной сфере, воспитание детей, вопросы подросткового возраста.</p></article>
+      <article class="card"><div class="icon"><i class="fa-solid fa-user-group"></i></div><h3>Психологические группы</h3><p>Поддержка, развитие навыков, безопасная рефлексия.</p></article>
+      <article class="card"><div class="icon"><i class="fa-solid fa-heart-pulse"></i></div><h3>Чекап душевного состояния</h3><p>Анализ состояния, профилактика, ресурсы, «зоны риска», подробная «карта состояния».</p></article>
+      <article class="card"><div class="icon"><i class="fa-solid fa-gauge-high"></i></div><h3>Тюнинг личности</h3><p>Тонкая настройка навыков под ваши задачи: эффективность, стрессоустойчивость, уверенность.</p></article>
+      <article class="card"><div class="icon"><i class="fa-solid fa-brain"></i></div><h3>Апгрейд личности и «псипутешествия»</h3><p>Трансформация, преодоление внутренних барьеров, раскрытие потенциала, иной взгляд на мир и себя.</p></article>
+    </div>
   </div>
+  <div class="section-sep"></div>
 </section>
 
 <section id="reviews" class="section alt">
   <div class="container">
     <h2>Отзывы</h2>
-    <div class="reviews">
-      <p>«После нескольких сеансов … доверительные отношения. Очень довольна, буду советовать всем знакомым.»</p>
-      <p>«…широкий диапазон техник; при необходимости может порекомендовать медикаменты. Превзошёл ожидания!»</p>
-      <p>«…большой специалист! … заинтересован в результате, бережно относится к состоянию пациентов.»</p>
+    <div class="cards two">
+      <div class="card quote"><div class="stars" aria-label="Оценка 5 из 5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>«После нескольких сеансов могу с уверенностью сказать, что Алексей Анатольевич — чудесный специалист… Отдельным плюсом считаю умение быстро найти общий язык с подростком… Очень довольна, буду советовать всем знакомым.»</div>
+      <div class="card quote"><div class="stars" aria-label="Оценка 5 из 5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>«После пары первых сессий принял решение о постоянной терапии… Очень опытный специалист… широкий диапазон техник… При необходимости может порекомендовать медикаменты. Превзошёл ожидания!»</div>
+      <div class="card quote"><div class="stars" aria-label="Оценка 5 из 5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>«Очень довольны работой психотерапевта! … Диалог прошёл позитивно и доброжелательно… Заинтересован в результате, заботится о состоянии пациентов.»</div>
     </div>
   </div>
+  <div class="section-sep"></div>
 </section>
 
 <section id="contacts" class="section">
-  <div class="container">
-    <h2>Контакты</h2>
-    <p><strong>Тел.:</strong> <a href="tel:+79267995927">+7 926 799 59 27</a></p>
-    <p><strong>Домен:</strong> zdanovich.mirblag.ru</p>
-    <p><strong>Запись:</strong> <a class="btn" href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener">Написать в Telegram</a></p>
+  <div class="container contacts">
+    <div>
+      <h2>Контакты</h2>
+      <ul class="contact-list">
+        <li><i class="fa-solid fa-phone"></i> <a href="tel:+79267995927">+7&nbsp;926&nbsp;799&nbsp;59&nbsp;27</a></li>
+        <li><i class="fa-brands fa-telegram"></i> <a href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener">@DrZdanovichPsy</a></li>
+        <li><i class="fa-solid fa-globe"></i> zdanovich.mirblag.ru</li>
+      </ul>
+      <div class="cta">
+        <a class="btn btn-primary" href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i> Написать в Telegram</a>
+        <a class="btn btn-ghost" href="https://www.b17.ru/doctorzdanovich/" target="_blank" rel="noopener"><i class="fa-solid fa-notes-medical"></i> Профиль B17</a>
+      </div>
+    </div>
   </div>
 </section>
 
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="copy">© <span id="y"></span> Мир благополучия — Алексей Зданович</div>
+    <div class="socials">
+      <a href="https://vk.com/shkoladocrorazdanovicha" target="_blank" aria-label="VK"><i class="fa-brands fa-vk"></i></a>
+      <a href="https://t.me/psyclub_svobodnyeassociations" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+      <a href="https://rutube.ru/channel/34639458/" target="_blank" aria-label="Rutube"><i class="fa-solid fa-play"></i></a>
+      <a href="https://ok.ru/group70000006131752" target="_blank" aria-label="OK"><i class="fa-brands fa-odnoklassniki"></i></a>
+      <a href="https://www.instagram.com/dr.aleksey.zdanovich?utm_source=qr&igsh=MWVqY2Z3djZhdWp0Yg==" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://dzen.ru/drzdanovich?share_to=link" target="_blank" aria-label="Dzen"><i class="fa-solid fa-z"></i></a>
+      <a href="https://tenchat.ru/4868340" target="_blank" aria-label="Tenchat"><i class="fa-solid fa-link"></i></a>
+      <a href="https://yappy.media/profile" target="_blank" aria-label="Yappy"><i class="fa-solid fa-link"></i></a>
+    </div>
   </div>
 </footer>
 
-<button class="to-top" aria-label="Наверх">↑</button>
+<button class="to-top" aria-label="Наверх"><i class="fa-solid fa-arrow-up"></i></button>
 
 <script>
-  // Год
+  // Год в подвале
   (function(){ var y=document.getElementById('y'); if(y) y.textContent=new Date().getFullYear(); })();
 
   // Бургер
@@ -137,19 +184,18 @@
   function robustLoad(imgEl, baseName){ // baseName без расширения
     var tried = 0;
     var variants = [
-      "./" + baseName + ".jpg?v=6",
-      "/"  + baseName + ".jpg?v=6",
-      "./" + baseName + ".jpeg?v=6",
-      "/"  + baseName + ".jpeg?v=6",
-      "./" + baseName.toUpperCase() + ".JPG?v=6",
-      "/"  + baseName.toUpperCase() + ".JPG?v=6"
+      "./" + baseName + ".jpg?v=7",
+      "/"  + baseName + ".jpg?v=7",
+      "./" + baseName + ".jpeg?v=7",
+      "/"  + baseName + ".jpeg?v=7",
+      "./" + baseName.toUpperCase() + ".JPG?v=7",
+      "/"  + baseName.toUpperCase() + ".JPG?v=7"
     ];
     function tryNext(){
       if(tried >= variants.length) return;
       imgEl.src = variants[tried++];
     }
     imgEl.addEventListener('error', tryNext);
-    // если уже не загрузилось (например, первый src пустой) — пробуем варианты
     if(!imgEl.complete || imgEl.naturalWidth === 0){ tryNext(); }
   }
   robustLoad(document.getElementById('heroImg'),  "hero");
