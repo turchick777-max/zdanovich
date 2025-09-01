@@ -44,7 +44,7 @@ img{max-width:100%;height:auto;display:block}
 .site-header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.78);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:14px;height:76px}
 
-/* Премиальный логотип — равномерный золотой градиент + читабельность */
+/* Премиальный логотип: равномерный золотой, без «засвета», читаемый везде */
 .brand{
   display:inline-block;
   text-decoration:none;
@@ -53,19 +53,21 @@ img{max-width:100%;height:auto;display:block}
   font-size:clamp(2.2rem, 3vw, 2.5rem);
   letter-spacing:.03em;
   line-height:1;
-  background:linear-gradient(135deg,var(--gold-1),var(--gold-2) 55%,var(--gold-3));
+  /* ровный градиент: от светло-золотого к тёплому янтарю */
+  background:linear-gradient(120deg,#E7C873 0%, #D4AF37 45%, #C99700 75%, #B27700 100%);
   -webkit-background-clip:text; background-clip:text; color:transparent;
-  -webkit-text-stroke:0.6px rgba(0,0,0,.25);               /* контур для читабельности */
-  text-shadow:0 1px 0 rgba(0,0,0,.06), 0 4px 14px rgba(212,175,55,.28);
+  /* тонкий контур для читаемости на любых фонах */
+  -webkit-text-stroke:0.6px rgba(0,0,0,.22);
+  text-shadow:0 1px 0 rgba(0,0,0,.05), 0 6px 14px rgba(201,151,0,.28);
   position:relative; transform-origin:left center;
   transition:transform .2s ease, filter .2s ease, text-shadow .2s ease;
 }
 .brand::after{
   content:""; position:absolute; left:0; right:0; bottom:-8px; height:2px;
-  background:linear-gradient(90deg,transparent,var(--gold-2),transparent);
-  filter:drop-shadow(0 2px 6px rgba(201,151,0,.45));
+  background:linear-gradient(90deg,transparent,#D4AF37,transparent);
+  filter:drop-shadow(0 2px 6px rgba(201,151,0,.35));
 }
-.brand:hover{ transform:scale(1.045); filter:brightness(1.05); text-shadow:0 10px 30px rgba(201,151,0,.35); }
+.brand:hover{ transform:scale(1.045); filter:brightness(1.04); text-shadow:0 10px 26px rgba(201,151,0,.35); }
 
 /* nav */
 .menu{display:flex;gap:18px;flex-wrap:wrap}
@@ -74,13 +76,31 @@ img{max-width:100%;height:auto;display:block}
 .nav-toggle{display:none;background:#fff;border:1px solid var(--line);border-radius:12px;width:44px;height:44px;min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-sm)}
 .nav-toggle i{font-size:18px;color:#334155}
 
-/* НАСТОЯЩАЯ мобилка: бургер + оверлей-меню */
+/* Мобилка: скрываем горизонтальное меню по умолчанию, показываем бургер */
 @media (max-width:900px){
-  .menu{position:fixed;inset:76px 0 0 0;background:#fff;border-top:1px solid var(--line);display:none;flex-direction:column;padding:16px;z-index:39}
-  .menu.open{display:flex}
-  .menu a{padding:14px 12px;font-size:18px}
-  .nav-toggle{display:flex}
+  .menu{display:none !important;}              /* ← меню скрыто по умолчанию */
+  .menu.open{display:flex !important;}         /* открываем только по клику */
+  .menu{
+    position:fixed; inset:76px 0 0 0; z-index:39;
+    flex-direction:column; gap:0; padding:14px 16px;
+    background:#fff; border-top:1px solid var(--line);
+  }
+  .menu a{padding:14px 10px; font-size:18px; border-radius:12px;}
+  .nav-toggle{display:flex}                    /* показываем бургер */
 }
+/* Мобайл-комфорт: кнопки минимум 48px, текст крупнее */
+@media (max-width:768px){
+  .container{padding:0 16px}
+  .btn{min-height:52px; font-size:17px}
+  .lead, p, li{font-size:17px; line-height:1.75}
+  .section{padding:74px 0}
+  .hero-inner{padding:72px 0}
+}
+@media (max-width:768px){
+  [data-reveal]{transition-duration:.45s}
+  .photo img{animation-duration:5.5s}
+}
+
 
 /* hero */
 .hero{position:relative;isolation:isolate;overflow:hidden}
@@ -129,13 +149,32 @@ img{max-width:100%;height:auto;display:block}
 .icon{width:44px;height:44px;min-width:44px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(255,166,0,.2), rgba(42,157,244,.2));color:#111;margin-bottom:10px}
 .icon i{font-size:20px}
 
-/* отзывы */
-.card.quote{position:relative;font-size:18px;color:#0f172a;line-height:1.6;padding:24px 20px 20px 56px;background:
-  radial-gradient(400px 180px at -20% 0%, rgba(255,166,0,.08), transparent 60%),
-  var(--surface)}
-.card.quote::before{content:"“";position:absolute;left:18px;top:6px;font-family:"Playfair Display",Georgia,serif;font-size:48px;color:#e2d9c5;line-height:1}
-.stars{color:#f59e0b;margin:-2px 0 8px}
-.stars i{margin-right:2px}
+/* отзывы: свёрнутые по умолчанию (мобайл), разворачиваются по кнопке */
+.card.quote .review-text{
+  max-height: 8.5em;           /* ~5 строк */
+  overflow: hidden;
+  position: relative;
+  transition: max-height .35s ease;
+}
+.card.quote .review-text::after{
+  content:"";
+  position:absolute; left:0; right:0; bottom:0; height:48px;
+  background:linear-gradient(180deg, rgba(255,255,255,0), #fff 65%);
+}
+.card.quote.expanded .review-text{
+  max-height: 1000px;          /* условно «без ограничений» */
+}
+.card.quote.expanded .review-text::after{ display:none; }
+
+/* кнопка «Читать полностью» */
+.review-toggle{
+  margin-top:12px; align-self:flex-start; cursor:pointer;
+  background:#fff; border:1px solid var(--line); color:#0f172a;
+  border-radius:12px; padding:10px 14px; font-weight:600;
+  transition:transform .15s, box-shadow .15s, border-color .15s;
+}
+.review-toggle:hover{ transform:translateY(-1px); box-shadow:var(--shadow-sm); border-color:#ecdcc6 }
+
 
 /* контакты */
 .contacts{display:grid;grid-template-columns:1fr;gap:24px;align-items:start}
