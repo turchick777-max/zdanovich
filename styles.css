@@ -1,14 +1,10 @@
-/* показываем страницу всегда */
-body{opacity:1 !important;}
-
 :root{
   --bg:#fffdf8; --surface:#ffffff; --ink:#0f172a; --muted:#475569; --line:#efe7da;
-  --primary:#ff8a00; --accent:#2a9df4; --accent-2:#ffd166; --pill:#fff4d6;
-  --gold-1:#E7C873; --gold-2:#D4AF37; --gold-3:#B27700;
+  --primary:#ff8a00; --accent:#2a9df4; --pill:#fff4d6;
+  --gold-1:#EBD38A; --gold-2:#D4AF37; --gold-3:#B27700;
   --shadow-sm:0 6px 18px rgba(2,6,23,.06);
   --shadow-md:0 12px 30px rgba(2,6,23,.10);
   --shadow-lg:0 20px 48px rgba(2,6,23,.14);
-  --r-sm:12px; --r-md:16px; --r-lg:22px; --r-xl:28px;
 }
 
 *{box-sizing:border-box}
@@ -23,8 +19,8 @@ body{
 @media (min-width:1200px){ body{font-size:18px} }
 
 h1,h2,h3{margin:0 0 12px; letter-spacing:-.02em; color:var(--ink)}
-h1{font-family:"Playfair Display","Cormorant Garamond",Georgia,serif;font-weight:700;font-size:clamp(32px,5.2vw,56px);line-height:1.06}
-h2{font-family:"Playfair Display","Cormorant Garamond",Georgia,serif;font-weight:700;font-size:clamp(24px,3.2vw,36px)}
+h1{font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:clamp(32px,5.2vw,56px);line-height:1.06}
+h2{font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:clamp(24px,3.2vw,36px)}
 h3{font-weight:700;font-size:clamp(18px,2.2vw,22px)}
 p{margin:0 0 10px}
 .muted{color:var(--muted)}
@@ -37,24 +33,23 @@ img{max-width:100%;height:auto;display:block}
 .section.alt{background:var(--surface)}
 .section-sep{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);margin-top:60px}
 
-/* progress */
+/* прогресс */
 #progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold-1),var(--gold-2),var(--gold-3));z-index:50}
 
-/* header + бренд */
+/* header */
 .site-header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.78);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:14px;height:76px}
 
-/* логотип — ровный золотой, читабельный */
+/* бренд с логотипом */
 .brand{
-  display:inline-block; text-decoration:none;
+  display:inline-flex;align-items:center;gap:10px;text-decoration:none;
   font-family:"Playfair Display","Cormorant Garamond",Georgia,serif;
   font-weight:700; font-size:clamp(2.2rem, 3vw, 2.5rem); letter-spacing:.03em; line-height:1;
   background:linear-gradient(120deg,var(--gold-1) 0%, var(--gold-2) 55%, var(--gold-3) 100%);
   -webkit-background-clip:text; background-clip:text; color:transparent;
-  -webkit-text-stroke:0.6px rgba(0,0,0,.22);
-  text-shadow:0 1px 0 rgba(0,0,0,.05), 0 6px 14px rgba(201,151,0,.28);
-  position:relative; transform-origin:left center;
-  transition:transform .2s ease, filter .2s ease, text-shadow .2s ease;
+  -webkit-text-stroke:0.55px rgba(0,0,0,.18);
+  text-shadow:0 1px 0 rgba(0,0,0,.04), 0 6px 14px rgba(201,151,0,.22);
+  position:relative; transform-origin:left center; transition:transform .2s,filter .2s,text-shadow .2s;
 }
 .brand::after{
   content:""; position:absolute; left:0; right:0; bottom:-8px; height:2px;
@@ -62,15 +57,18 @@ img{max-width:100%;height:auto;display:block}
   filter:drop-shadow(0 2px 6px rgba(201,151,0,.35));
 }
 .brand:hover{ transform:scale(1.045); filter:brightness(1.04); text-shadow:0 10px 26px rgba(201,151,0,.35); }
+.brand-logo{
+  width:34px;height:34px;border-radius:50%;
+  box-shadow:0 0 0 2px #fff, 0 4px 10px rgba(0,0,0,.15); object-fit:cover; flex:0 0 34px;
+}
 
-/* меню и бургер */
+/* меню + бургер */
 .menu{display:flex;gap:18px;flex-wrap:wrap}
 .menu a{text-decoration:none;color:var(--muted);padding:10px 12px;border-radius:12px;transition:.2s;border:1px solid transparent}
 .menu a:hover{background:#fff7eb;border-color:var(--line);color:#111;box-shadow:var(--shadow-sm);transform:translateY(-1px)}
-.nav-toggle{display:none;background:#fff;border:1px solid var(--line);border-radius:12px;width:44px;height:44px;min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-sm)}
+.nav-toggle{display:none;background:#fff;border:1px solid var(--line);border-radius:12px;width:44px;height:44px;min-width:44px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-sm)}
 .nav-toggle i{font-size:18px;color:#334155}
 
-/* мобилка: только бургер, меню скрыто пока не откроют */
 @media (max-width:900px){
   .menu{display:none !important;}
   .menu.open{display:flex !important;}
@@ -83,7 +81,7 @@ img{max-width:100%;height:auto;display:block}
   .nav-toggle{display:flex}
 }
 
-/* hero и фоновые эффекты */
+/* hero + фоны */
 .hero{position:relative;isolation:isolate;overflow:hidden}
 .hero .bg{position:absolute;inset:-10% -10% 0 -10%;
   background:
@@ -109,17 +107,31 @@ img{max-width:100%;height:auto;display:block}
 @keyframes drift{from{transform:translateY(0)}to{transform:translateY(-40px)}}
 
 .hero-inner{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:100px 0}
-.deviz{color:#b35b00}
+.eyebrow{display:inline-block;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#7c6a46;background:var(--pill);padding:6px 12px;border-radius:999px;margin-bottom:14px;border:1px solid #f3e6c6}
+
+.hero h1{
+  font-family:"Playfair Display",Georgia,serif;font-weight:700;
+  font-size:clamp(32px, 5vw, 54px); line-height:1.1;
+  background:linear-gradient(120deg,#e6c979 0%, #d4af37 60%, #b8860b 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+  -webkit-text-stroke:0.5px rgba(0,0,0,.15); text-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+.deviz{color:#b35b00;font-size:clamp(18px,2.8vw,26px)}
+
 .lead{color:var(--muted);font-size:1rem}
 .copy{max-width:680px}
 .frame{background:#f8fafc;border:1px solid var(--line);padding:8px;border-radius:16px}
-.photo img{border-radius:20px;box-shadow:var(--shadow-lg);object-fit:cover;transform:translateZ(0);animation:float 6s ease-in-out infinite alternate}
+
+/* рамка вокруг портретов */
+.photo img, .photo-card img{
+  border-radius:20px;
+  box-shadow:0 0 0 2px #f2e8cd, 0 0 0 6px rgba(255,210,130,.35), var(--shadow-lg);
+  object-fit:cover; transform:translateZ(0); animation:float 6s ease-in-out infinite alternate;
+}
 @keyframes float{from{transform:translateY(0)}to{transform:translateY(-6px)}}
 
-.eyebrow{display:inline-block;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#7c6a46;background:var(--pill);padding:6px 12px;border-radius:999px;margin-bottom:14px;border:1px solid #f3e6c6}
-
 .chips{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 0;padding:0}
-.chips li{list-style:none;background:#fff7de;color:#5b4b2b;border:1px solid var(--line);padding:8px 12px;border-radius:999px;font-size:13px}
+.chips li{list-style:none;background:#fff7de;color:#5b4b2b;border:1px solid var(--line);padding:8px 12px;border-radius:999px;font-size:14px}
 
 /* сетки/карточки */
 .grid-2{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;align-items:center}
@@ -130,15 +142,20 @@ img{max-width:100%;height:auto;display:block}
 .icon{width:44px;height:44px;min-width:44px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(255,166,0,.2), rgba(42,157,244,.2));color:#111;margin-bottom:10px}
 .icon i{font-size:20px}
 
-/* отзывы — ВСЕГДА полностью развернуты */
+/* отзывы — всегда полностью */
 .card.quote{position:relative;font-size:18px;color:#0f172a;line-height:1.6;padding:24px 20px 20px 56px;background:
   radial-gradient(400px 180px at -20% 0%, rgba(255,166,0,.08), transparent 60%),
   var(--surface)}
 .card.quote::before{content:"“";position:absolute;left:18px;top:6px;font-family:"Playfair Display",Georgia,serif;font-size:48px;color:#e2d9c5;line-height:1}
-.card.quote .review-text{max-height:none; overflow:visible; position:relative; transition:none}
-.card.quote .review-text::after{display:none}
+.card.quote .review-text{max-height:none; overflow:visible}
 .stars{color:#f59e0b;margin:-2px 0 8px}
 .stars i{margin-right:2px}
+
+/* ЮМОР */
+.meme-grid{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
+.meme-card{display:block;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;box-shadow:var(--shadow-sm);transition:transform .15s, box-shadow .15s, border-color .15s}
+.meme-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:#ecdcc6}
+.meme-card img{width:100%;height:100%;object-fit:cover;display:block}
 
 /* контакты */
 .contacts{display:grid;grid-template-columns:1fr;gap:24px;align-items:start}
@@ -168,14 +185,17 @@ img{max-width:100%;height:auto;display:block}
 .to-top.show{opacity:1;pointer-events:auto;transform:translateY(0)}
 .to-top i{font-size:18px}
 
-/* reveal-анимации */
+/* reveal */
 [data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .5s ease, transform .5s ease}
 .reveal--visible{opacity:1;transform:none}
 
-/* адаптив: одна колонка на телефонах */
+/* адаптив */
 @media (max-width:1100px){
   .hero-inner{grid-template-columns:1fr;gap:28px;padding:80px 0}
   .grid-2{grid-template-columns:1fr}
+}
+@media (max-width:900px){
+  .meme-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:768px){
   .section{padding:74px 0}
@@ -183,4 +203,7 @@ img{max-width:100%;height:auto;display:block}
   .cards.two{grid-template-columns:1fr}
   .btn{min-height:52px;font-size:17px}
   .lead, p, li{font-size:17px; line-height:1.75}
+}
+@media (max-width:560px){
+  .meme-grid{grid-template-columns:1fr}
 }
