@@ -1,0 +1,19 @@
+:root{--gold1:#D5A533;--gold2:#9B6B10;--shadow:0 10px 28px rgba(17,24,39,.10)}
+*{box-sizing:border-box}html,body{margin:0;font-family:Inter,system-ui}
+.container{max-width:1120px;margin:auto;padding:0 20px}
+.header{position:sticky;top:0;background:#fff}
+.header-inner{display:flex;justify-content:space-between;align-items:center;min-height:74px}
+.brand{display:flex;gap:10px;align-items:center;text-decoration:none}
+.brand__logo{width:32px;height:32px;border-radius:50%}
+.brand__line{display:flex;gap:8px;flex-wrap:wrap}
+.brand__main,.brand__subline{font-family:'Playfair Display',serif;font-weight:800;background:linear-gradient(180deg,var(--gold1),var(--gold2));-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:.035em;text-shadow:0 0 1px rgba(155,107,16,.45),0 2px 4px rgba(0,0,0,.28)}
+.brand__main{font-size:1.9rem}.brand__subline{font-size:1.7rem}
+.chips{list-style:none;display:flex;gap:10px;padding:0}
+.photo-frame{background:#fff;border-radius:20px;padding:10px;box-shadow:var(--shadow);border:1px solid #f1e6cf}
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:26px;align-items:center;padding:18px 0 10px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid #f3ead3;border-radius:16px;box-shadow:var(--shadow);padding:18px}
+.check{list-style:none;margin:10px 0 0;padding:0}
+.check li{position:relative;padding-left:28px;margin:8px 0}
+.check li::before{content:"\f004";font-family:"Font Awesome 6 Free";font-weight:900;color:#d97706;position:absolute;left:0;top:.2em}
+.footer{margin-top:40px;background:#0f172a;color:#e5e7eb}
