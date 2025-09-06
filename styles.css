@@ -207,3 +207,19 @@ img{max-width:100%;height:auto;display:block}
 @media (max-width:560px){
   .meme-grid{grid-template-columns:1fr}
 }
+/* услуги — доп.оформление */
+.service-card .price{margin-top:10px;font-weight:700}
+.service-card details{margin-top:8px}
+.service-card summary{
+  cursor:pointer; user-select:none; padding:8px 0; font-weight:600;
+  color:#0f172a; display:flex; align-items:center; gap:8px;
+}
+.service-card summary::after{
+  content:""; width:10px; height:10px; border-right:2px solid #b8860b; border-bottom:2px solid #b8860b;
+  transform:rotate(-45deg); margin-left:auto; transition:transform .2s;
+}
+.service-card details[open] summary::after{ transform:rotate(45deg) }
+.service-card .list{padding-left:18px;margin:4px 0 0}
+.service-card .list li{margin:6px 0}
+.small{font-size:.92em}
+
