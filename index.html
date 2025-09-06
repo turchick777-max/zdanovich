@@ -1,458 +1,140 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Доктор Зданович — Мир благополучия</title>
-  <meta name="description" content="Алексей Анатольевич Зданович — врач-психиатр, психотерапевт, сексолог, супервизор, к.м.н. «Через тернии к людям»." />
+</div>
+            </section>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+            <!-- Контакты -->
+            <section id="contacts" class="section">
+                <h2>Контакты</h2>
+                
+                <div style="text-align: center; margin: 30px 0;">
+                    <h3>📞 Запись на консультацию</h3>
+                    <p style="font-size: 1.2rem; color: #f8961e; margin: 15px 0;">
+                        <strong>+7 926 799 59 27</strong>
+                    </p>
+                    <p>Звоните или пишите — подберем удобное время для встречи</p>
+                </div>
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h4>🌐 Сайты и профили</h4>
+                        <p><a href="https://www.b17.ru/doctorzdanovich/" target="_blank">B17.ru - Профиль</a></p>
+                        <p><a href="https://profi.ru/profile/ZdanovichAA" target="_blank">Profi.ru - Отзывы</a></p>
+                    </div>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/logo-sun.png">
+                    <div class="contact-card">
+                        <h4>📱 Социальные сети</h4>
+                        <p><a href="https://vk.com/shkoladocrorazdanovicha" target="_blank">ВКонтакте</a></p>
+                        <p><a href="https://ok.ru/group70000006131752" target="_blank">Одноклассники</a></p>
+                        <p><a href="https://www.instagram.com/dr.aleksey.zdanovich" target="_blank">Instagram</a></p>
+                    </div>
 
-  <link rel="stylesheet" href="styles.css?v=12">
-</head>
-<body>
+                    <div class="contact-card">
+                        <h4>📺 Видео и контент</h4>
+                        <p><a href="https://rutube.ru/channel/34639458/" target="_blank">RuTube</a></p>
+                        <p><a href="https://dzen.ru/drzdanovich" target="_blank">Яндекс.Дзен</a></p>
+                        <p><a href="https://yappy.media/profile" target="_blank">Yappy</a></p>
+                    </div>
 
-<!-- Прогресс прокрутки -->
-<div id="progress"></div>
+                    <div class="contact-card">
+                        <h4>💬 Мессенджеры</h4>
+                        <p><a href="https://t.me/psyclub_svobodnyeassociations" target="_blank">Telegram</a></p>
+                        <p><a href="https://tenchat.ru/4868340" target="_blank">TenChat</a></p>
+                    </div>
+                </div>
 
-<header class="site-header">
-  <div class="container nav">
-   <a href="#hero" class="brand" aria-label="Доктор Зданович — Мир благополучия">
-  <img class="brand-logo" src="/logo-sun.png" alt="" loading="lazy">
-  <span class="brand-main">Доктор&nbsp;Зданович</span>
-  <span class="brand-dot">•</span>
-  <span class="brand-sub">Мир&nbsp;благополучия</span>
-</a>
+                <div style="background: #fff8e7; padding: 30px; border-radius: 15px; margin: 30px 0; text-align: center;">
+                    <h3>⏰ Режим работы</h3>
+                    <p style="font-size: 1.1rem;">Консультации проводятся по предварительной записи</p>
+                    <p>Возможны как очные встречи, так и онлайн-консультации</p>
+                    <p style="margin-top: 20px; font-style: italic; color: #f8961e;">
+                        "Лучшее время для обращения к специалисту — сегодня"
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
 
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Доктор Зданович и Мир Благополучия</p>
+            <p>Через тернии к людям • Практика с 1992 года</p>
+            <p style="margin-top: 10px; opacity: 0.8;">
+                Врач-психиатр • Психотерапевт • Сексолог • Супервизор
+            </p>
+        </div>
+    </footer>
 
-    <button class="nav-toggle" aria-label="Открыть меню" aria-expanded="false">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-    <nav class="menu">
-      <a href="#about">Обо мне</a>
-      <a href="#services">Услуги</a>
-      <a href="#reviews">Отзывы</a>
-      <a href="#humor">Юмор</a>
-      <a href="#contacts">Контакты</a>
-    </nav>
-  </div>
-</header>
+    <script>
+        function showSection(sectionId) {
+            // Скрываем все секции
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
 
-<section class="hero" id="hero">
-  <div class="bg" aria-hidden="true"></div>
-  <div class="bg-shapes" aria-hidden="true"></div>
-  <div class="floaters" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+            // Убираем активный класс с навигации
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(item => {
+                item.classList.remove('active');
+            });
 
-  <div class="container hero-inner">
-    <div class="copy" data-reveal>
-      <div class="eyebrow">Мир благополучия</div>
-      <h1 class="only-deviz">
-  <span class="deviz">«Через тернии к людям»</span>
-</h1>
-      <p class="lead">Алексей Анатольевич Зданович — врач-психиатр, психотерапевт, сексолог, супервизор, к.м.н.</p>
+            // Показываем выбранную секцию
+            document.getElementById(sectionId).classList.add('active');
 
-      <div class="cta">
-        <a class="btn btn-primary" href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener">
-          <i class="fa-brands fa-telegram"></i> Записаться в Telegram
-        </a>
-        <a class="btn btn-ghost" href="https://www.b17.ru/doctorzdanovich/" target="_blank" rel="noopener">
-          <i class="fa-solid fa-notes-medical"></i> Профиль B17
-        </a>
-        <a class="btn btn-ghost" href="https://profi.ru/profile/ZdanovichAA" target="_blank" rel="noopener">
-          <i class="fa-solid fa-certificate"></i> Профи.ру (отзывы)
-        </a>
-      </div>
+            // Добавляем активный класс к соответствующему пункту навигации
+            event.target.classList.add('active');
 
-      <ul class="chips">
-        <li><i class="fa-solid fa-trophy"></i> Практика с 1992 года</li>
-        <li><i class="fa-solid fa-video"></i> Онлайн и очно</li>
-        <li><i class="fa-solid fa-telescope"></i> Супервизии</li>
-      </ul>
-    </div>
-
-    <div class="photo frame parallax-l3" data-reveal>
-      <img id="heroImg" src="./hero.jpg?v=12" alt="А.А. Зданович" loading="lazy" />
-    </div>
-  </div>
-
-  <a href="#about" class="scroll-down" aria-label="Листать вниз"><i class="fa-solid fa-chevron-down"></i></a>
-</section>
-
-<section id="about" class="section alt">
-  <div class="container grid-2">
-    <div class="photo-card frame parallax-l2" data-reveal>
-      <img id="aboutImg" src="./about.jpg?v=12" alt="А.А. Зданович" loading="lazy" />
-    </div>
-    <div data-reveal>
-      <h2>Обо мне</h2>
-      <p class="muted">Врач-психиатр, психотерапевт, сексолог, супервизор, Кандидат медицинских наук. Более 30 лет опыта.</p>
-
-      <p><strong>Образование:</strong> Кемеровский государственный медицинский институт («лечебное дело», с 1985 г. — 40 лет), Новокузнецкий ГИУВ («психотерапия» 1992–1997), <strong>клиническая ординатура</strong> по «Психиатрии», «Сексологии», «Психоаналитическому консультированию и психоаналитической психотерапии» (с 2000 г. — 25 лет).</p>
-
-      <p>Использую сочетание когнитивно-поведенческой и аналитической психотерапий, терапию, фокусированную на переносе. Применяю также коучинг и гипнотерапию.</p>
-
-      <ul class="badges">
-        <li><i class="fa-solid fa-heart-pulse"></i> Индивидуальные, семейные, групповые, супружеские занятия</li>
-        <li><i class="fa-solid fa-telescope"></i> Супервизии с использованием фокусно-ролевой матрицы</li>
-        <li>• Семинары и вебинары</li>
-      </ul>
-    </div>
-  </div>
-  <div class="section-sep"></div>
-</section>
-
-<!-- УСЛУГИ — ЗДЕСЬ ПОКА БАЗОВАЯ ВЕРСИЯ (ниже дам фрагмент для замены) -->
-<section id="services" class="section">
-  <div class="container">
-    <h2>Услуги</h2>
-
-    <div class="cards">
-      <!-- ТОП-БЛОКИ -->
-      <article class="card service-card">
-        <div class="icon"><i class="fa-solid fa-heart-pulse"></i></div>
-        <h3>Душевный чекап вас и ваших близких</h3>
-        <p>Оценка состояния, целей и ресурсов; карта сильных сторон и «зон роста»; персональные рекомендации.</p>
-        <details>
-          <summary>Подробнее и варианты</summary>
-          <ul class="list">
-            <li><strong>Основной</strong> — 3 консультации по 1 ак.ч. + 3–5 тестов. <b>100 000 ₽</b>.</li>
-            <li><strong>Семейный</strong> — 3–5 консультаций по 1 ак.ч. + тесты. <b>160 000–300 000 ₽</b>.</li>
-            <li><strong>Бизнес-чекап</strong> — 3 консультации по 1 ак.ч. <b>200 000–1 500 000 ₽</b>.</li>
-          </ul>
-          <p class="muted small">Фокусы чекапа: стиль управления/жизни, эффективность, «внутренние саботажники», баланс и др.</p>
-        </details>
-      </article>
-
-      <article class="card service-card">
-        <div class="icon"><i class="fa-solid fa-gauge-high"></i></div>
-        <h3>Тюнинг личности</h3>
-        <p>Тонкая настройка навыков под задачи: эффективность, стрессоустойчивость, уверенность.</p>
-        <div class="price">от 15 000 ₽ <small>/ 45 мин</small></div>
-      </article>
-
-      <article class="card service-card">
-        <div class="icon"><i class="fa-solid fa-brain"></i></div>
-        <h3>Апгрейд личности</h3>
-        <p>Глубинная трансформация: преодоление барьеров, раскрытие потенциала, смена сценариев.</p>
-        <div class="price">по согласованию</div>
-      </article>
-
-      <!-- ПСИ-ПУТЕШЕСТВИЯ -->
-      <article class="card service-card">
-        <div class="icon"><i class="fa-solid fa-mountain-sun"></i></div>
-        <h3>Пси-путешествия</h3>
-        <p>Работа с воображаемыми образами под руководством специалиста: снижение тревоги, инсайты, изменения.</p>
-        <details>
-          <summary>Форматы</summary>
-          <ul class="list">
-            <li><strong>Индивидуально</strong> — мягкая терапия под личный запрос.</li>
-            <li><strong>Групповой/тимбилдинг</strong> — общая тема, обмен образами, повышение доверия.</li>
-          </ul>
-          <p class="muted small">40–60 мин индивидуально; 5–20 человек в группах.</p>
-        </details>
-      </article>
-
-      <!-- ПРОЧИЕ УСЛУГИ -->
-      <article class="card service-card">
-        <div class="icon"><i class="fa-solid fa-user-doctor"></i></div>
-        <h3>Индивидуальная консультация</h3>
-        <p>Кризисы, тревога, депрессии, фобии, сон, психосоматика, сексуальность, зависимости и др.</p>
-        <div class="price">15 000 ₽ <small>/ 45 мин</small></div>
-      </article>
-
-      <article class="card service-card">
-        <div class="icon"><i class="fa-solid fa-people-roof"></i></div>
-        <h3>Семейная психотерапия</h3>
-        <p>Супружеские конфликты, сексуальная сфера, воспитание детей, подростковые сложности.</p>
-        <div class="price">25 000 ₽ <small>/ 90 мин</small></div>
-      </article>
-
-      <article class="card service-card">
-        <div class="icon"><i class="fa-solid fa-user-group"></i></div>
-        <h3>Групповая психотерапия</h3>
-        <p>Поддержка и развитие навыков в безопасной группе.</p>
-        <div class="price">4 000 ₽ <small>/ 90 мин</small></div>
-      </article>
-
-      <article class="card service-card">
-        <div class="icon"><i class="fa-solid fa-child-reaching"></i></div>
-        <h3>Детская психотерапия</h3>
-        <p>Игра, рисунок и диалог — помощь при тревогах, страхах, трудностях общения и обучения.</p>
-        <div class="price">12 000 ₽ <small>/ 45 мин</small></div>
-      </article>
-
-      <article class="card service-card">
-        <div class="icon"><i class="fa-solid fa-person-rays"></i></div>
-        <h3>Подростковая психотерапия</h3>
-        <p>Поддержка самооценки, отношений и выбора; помощь в переживаниях и планах на будущее.</p>
-        <div class="price">14 000 ₽ <small>/ 45 мин</small></div>
-      </article>
-
-      <article class="card service-card">
-        <div class="icon"><i class="fa-solid fa-compass"></i></div>
-        <h3>Коучинг</h3>
-        <p>Цели, ресурсы, стратегия, движение к результату без лишнего стресса.</p>
-        <div class="price">25 000 ₽ <small>/ 45 мин</small></div>
-      </article>
-
-      <article class="card service-card">
-        <div class="icon"><i class="fa-solid fa-telescope"></i></div>
-        <h3>Супервизия (индивидуальная)</h3>
-        <p>Формат «один на один» для специалистов: разбор случаев, профилактика выгорания.</p>
-        <div class="price">8 000 ₽ <small>/ 50 мин</small></div>
-      </article>
-
-      <article class="card service-card">
-        <div class="icon"><i class="fa-solid fa-people-line"></i></div>
-        <h3>Супервизия (групповая)</h3>
-        <p>Разбор и обмен опытом в профессиональной группе.</p>
-        <div class="price">3 000 ₽ <small>/ 90 мин</small></div>
-      </article>
-    </div>
-  </div>
-  <div class="section-sep"></div>
-</section>
-
-  <div class="container">
-    <h2>Услуги</h2>
-
-    <div class="cards">
-      <article class="card">
-        <div class="icon"><i class="fa-solid fa-heart-pulse"></i></div>
-        <h3>Душевный чекап вас и ваших близких</h3>
-        <p>Оценка состояния, целей и ресурсов; карта сильных сторон и «зон роста»; персональные рекомендации.</p>
-        <div class="price">от 15 000 ₽ <small>/ 45–60 мин</small></div>
-      </article>
-
-      <article class="card">
-        <div class="icon"><i class="fa-solid fa-gauge-high"></i></div>
-        <h3>Тюнинг личности</h3>
-        <p>Тонкая настройка навыков под задачи: эффективность, стрессоустойчивость, уверенность.</p>
-        <div class="price">от 15 000 ₽ <small>/ 45 мин</small></div>
-      </article>
-
-      <article class="card">
-        <div class="icon"><i class="fa-solid fa-brain"></i></div>
-        <h3>Апгрейд личности</h3>
-        <p>Глубинная трансформация: преодоление барьеров, раскрытие потенциала, смена сценариев.</p>
-        <div class="price">по согласованию</div>
-      </article>
-    </div>
-  </div>
-  <div class="section-sep"></div>
-</section>
-
-<section id="reviews" class="section alt">
-  <div class="container">
-    <h2>Отзывы</h2>
-    <p class="muted" style="margin:-6px 0 12px">
-      <a href="https://profi.ru/profile/ZdanovichAA" target="_blank" rel="noopener">Смотреть отзывы на Профи.ру →</a>
-    </p>
-
-    <div class="cards two">
-      <div class="card quote" data-reveal>
-        <div class="stars" aria-label="5/5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-        <div class="review-text">«После нескольких сеансов могу с уверенностью сказать, что Алексей Анатольевич — чудесный специалист…»</div>
-      </div>
-      <div class="card quote" data-reveal>
-        <div class="stars" aria-label="5/5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-        <div class="review-text">«После пары первых сессий принял решение о постоянной терапии… Превзошёл ожидания!»</div>
-      </div>
-      <div class="card quote" data-reveal>
-        <div class="stars" aria-label="5/5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-        <div class="review-text">«Диалог прошёл позитивно и доброжелательно…»</div>
-      </div>
-    </div>
-  </div>
-  <div class="section-sep"></div>
-</section>
-
-<!-- ЮМОР -->
-<section id="humor" class="section alt">
-  <div class="container">
-    <h2>Юмор</h2>
-    <p class="muted" style="margin:-6px 0 14px">Немного лёгкого юмора о жизни и психологии.</p>
-
-    <div class="meme-grid">
-      <a href="/humor-01.jpg" class="meme-card" target="_blank" rel="noopener">
-        <img src="/humor-01.jpg" alt="Мем 1" loading="lazy">
-      </a>
-      <a href="/humor-02.jpg" class="meme-card" target="_blank" rel="noopener">
-        <img src="/humor-02.jpg" alt="Мем 2" loading="lazy">
-      </a>
-      <a href="/humor-03.jpg" class="meme-card" target="_blank" rel="noopener">
-        <img src="/humor-03.jpg" alt="Мем 3" loading="lazy">
-      </a>
-      <a href="/humor-04.jpg" class="meme-card" target="_blank" rel="noopener">
-        <img src="/humor-04.jpg" alt="Мем 4" loading="lazy">
-      </a>
-      <a href="/humor-05.jpg" class="meme-card" target="_blank" rel="noopener">
-        <img src="/humor-05.jpg" alt="Мем 5" loading="lazy">
-      </a>
-      <a href="/humor-06.jpg" class="meme-card" target="_blank" rel="noopener">
-        <img src="/humor-06.jpg" alt="Мем 6" loading="lazy">
-      </a>
-    </div>
-  </div>
-  <div class="section-sep"></div>
-</section>
-
-<section id="contacts" class="section">
-  <div class="container contacts">
-    <div data-reveal>
-      <h2>Контакты</h2>
-      <ul class="contact-list">
-        <li><i class="fa-solid fa-phone"></i> <a href="tel:+79267995927">+7&nbsp;926&nbsp;799&nbsp;59&nbsp;27</a></li>
-        <li><i class="fa-brands fa-telegram"></i> <a href="https://t.me/DrZdanovичPsy" target="_blank" rel="noopener">@DrZdanovichPsy</a></li>
-        <li><i class="fa-solid fa-globe"></i> zdanovich.mirblag.ru</li>
-      </ul>
-      <div class="cta">
-        <a class="btn btn-primary" href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i> Написать в Telegram</a>
-        <a class="btn btn-ghost" href="https://www.b17.ru/doctorzdanovich/" target="_blank" rel="noopener"><i class="fa-solid fa-notes-medical"></i> Профиль B17</a>
-        <a class="btn btn-ghost" href="https://profi.ru/profile/ZdanovichAA" target="_blank" rel="noopener"><i class="fa-solid fa-certificate"></i> Профи.ру</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="copy">© <span id="y"></span> Мир благополучия — Алексей Зданович</div>
-    <div class="social-links">
-      <a href="https://vk.com/shkoladocrorazdanovicha" target="_blank" aria-label="VK"><i class="fab fa-vk"></i></a>
-      <a href="https://t.me/psyclub_svobodnyeassociations" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-      <a href="https://ok.ru/group70000006131752" target="_blank" aria-label="OK"><i class="fab fa-odnoklassniki"></i></a>
-      <a href="https://rutube.ru/channel/34639458/" target="_blank" aria-label="Rutube"><i class="fa-solid fa-video"></i></a>
-      <a href="https://www.instagram.com/dr.aleksey.zdanovich?utm_source=qr&igsh=MWVqY2Z3djZhdWp0Yg==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://dzen.ru/drzdanovich?share_to=link" target="_blank" aria-label="Dzen"><i class="fa-solid fa-rss"></i></a>
-      <a href="https://tenchat.ru/4868340" target="_blank" aria-label="TenChat"><i class="fa-solid fa-user-tie"></i></a>
-      <a href="https://yappy.media/profile" target="_blank" aria-label="Yappy"><i class="fa-solid fa-link"></i></a>
-      <a href="https://profi.ru/profile/ZdanovichAA" target="_blank" aria-label="Profi.ru"><i class="fa-solid fa-certificate"></i></a>
-    </div>
-  </div>
-</footer>
-
-<button class="to-top" aria-label="Наверх"><i class="fa-solid fa-arrow-up"></i></button>
-
-<script>
-  // Год
-  (function(){ var y=document.getElementById('y'); if(y) y.textContent=new Date().getFullYear(); })();
-
-  // Меню
-  (function(){
-    var t=document.querySelector('.nav-toggle'), m=document.querySelector('.menu');
-    if(!t||!m) return;
-    t.addEventListener('click', function(){
-      var open=m.classList.toggle('open');
-      t.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-    document.querySelectorAll('.menu a').forEach(function(a){
-      a.addEventListener('click', function(){ m.classList.remove('open'); });
-    });
-    window.addEventListener('scroll', function(){
-      if(m.classList.contains('open')){ m.classList.remove('open'); t.setAttribute('aria-expanded','false'); }
-    }, {passive:true});
-  })();
-
-  // Якоря с учётом высоты шапки
-  (function(){
-    var h=document.querySelector('.site-header');
-    function hh(){ return h ? h.offsetHeight : 0; }
-    document.querySelectorAll('a[href^="#"]').forEach(function(link){
-      link.addEventListener('click', function(e){
-        var id=link.getAttribute('href').slice(1);
-        var trg=document.getElementById(id);
-        if(trg){ e.preventDefault();
-          var top=trg.getBoundingClientRect().top + window.scrollY - hh() - 8;
-          window.scrollTo({ top: top, behavior: 'smooth' });
+            // Прокручиваем к началу секции
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-      });
-    });
-  })();
 
-  // Кнопка «Наверх»
-  (function(){
-    var b=document.querySelector('.to-top'); if(!b) return;
-    window.addEventListener('scroll', function(){ b.classList.toggle('show', window.scrollY>600); }, {passive:true});
-    b.addEventListener('click', function(){ window.scrollTo({ top:0, behavior:'smooth' }); });
-  })();
+        function toggleAnswer(questionElement) {
+            const answer = questionElement.nextElementSibling;
+            const icon = questionElement.querySelector('span:last-child');
+            
+            if (answer.classList.contains('active')) {
+                answer.classList.remove('active');
+                icon.textContent = '+';
+            } else {
+                answer.classList.add('active');
+                icon.textContent = '−';
+            }
+        }
 
-  // Прогресс-бар
-  (function(){
-    var p=document.getElementById('progress'); if(!p) return;
-    function upd(){
-      var h=document.documentElement, st=h.scrollTop||document.body.scrollTop;
-      var sh=h.scrollHeight - h.clientHeight; var pr = sh>0 ? (st/sh)*100 : 0;
-      p.style.width=pr + "%";
-    }
-    window.addEventListener('scroll', upd, {passive:true}); upd();
-  })();
+        function showPayment() {
+            const paymentInfo = document.getElementById('payment-info');
+            if (paymentInfo.classList.contains('hidden')) {
+                paymentInfo.classList.remove('hidden');
+                // Здесь можно добавить реальную интеграцию с QR-кодом
+                alert('QR-код для оплаты:\nhttps://qr.nspk.ru/BS1A0076I1KE5JVR973OQDH2BULDV04H?type=01&bank=100000000004&crc=6503\n\nОткройте ссылку в банковском приложении или отсканируйте QR-код');
+            } else {
+                paymentInfo.classList.add('hidden');
+            }
+        }
 
-  // Надёжная загрузка изображений из корня
-  function robustLoad(imgEl, baseName){
-    var tried=0, variants=[
-      "./"+baseName+".jpg?v=12","/"+baseName+".jpg?v=12",
-      "./"+baseName+".jpeg?v=12","/"+baseName+".jpeg?v=12",
-      "./"+baseName.toUpperCase()+".JPG?v=12","/"+baseName.toUpperCase()+".JPG?v=12"
-    ];
-    function next(){ if(tried>=variants.length) return; imgEl.src=variants[tried++]; }
-    imgEl.addEventListener('error', next);
-    if(!imgEl.complete || imgEl.naturalWidth===0){ next(); }
-  }
-  robustLoad(document.getElementById('heroImg'),"hero");
-  robustLoad(document.getElementById('aboutImg'),"about");
+        // Добавляем анимации при прокрутке
+        window.addEventListener('scroll', function() {
+            const cards = document.querySelectorAll('.service-card, .review-card, .meme-card');
+            cards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                const cardVisible = 150;
+                
+                if (cardTop < window.innerHeight - cardVisible) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        });
 
-  // Появление блоков
-  (function(){
-    var els=[].slice.call(document.querySelectorAll('[data-reveal]'));
-    if(!('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('reveal--visible');}); return; }
-    var io=new IntersectionObserver(function(entries){
-      entries.forEach(function(ent){
-        if(ent.isIntersecting){ ent.target.classList.add('reveal--visible'); io.unobserve(ent.target); }
-      });
-    },{threshold:0.15});
-    els.forEach(function(e){ io.observe(e); });
-  })();
-
-  // Ripple-эффект на кнопках
-  (function(){
-    document.querySelectorAll('.btn').forEach(function(btn){
-      btn.addEventListener('click', function(e){
-        var r=document.createElement('span'); r.className='ripple';
-        var rect=btn.getBoundingClientRect();
-        var size=Math.max(rect.width,rect.height);
-        r.style.width=r.style.height=size+'px';
-        r.style.left=(e.clientX-rect.left-size/2)+'px';
-        r.style.top=(e.clientY-rect.top-size/2)+'px';
-        btn.appendChild(r);
-        setTimeout(function(){ r.remove(); }, 600);
-      });
-    });
-  })();
-
-  // Параллакс лёгкий
-  (function(){
-    if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var l2=document.querySelectorAll('.parallax-l2');
-    var l3=document.querySelectorAll('.parallax-l3');
-    function par(){
-      var y=window.scrollY||0;
-      l2.forEach(function(el){ el.style.transform='translateY('+(y*0.05)+'px)'; });
-      l3.forEach(function(el){ el.style.transform='translateY('+(y*0.09)+'px)'; });
-    }
-    window.addEventListener('scroll', par, {passive:true});
-    par();
-  })();
-</script>
-
+        // Инициализация
+        document.addEventListener('DOMContentLoaded', function() {
+            // Устанавливаем начальную прозрачность для карточек
+            const cards = document.querySelectorAll('.service-card, .review-card, .meme-card');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            });
+        });
+    </script>
 </body>
 </html>
