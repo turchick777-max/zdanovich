@@ -103,7 +103,7 @@ h2{font-family:'Playfair Display',serif;font-size:1.9rem;margin:0 0 14px}
   .svc-grid,.cards{grid-template-columns:repeat(2,1fr)}
   .music-cols{grid-template-columns:1fr 1fr}
 }
-@media (max-width: 900px){
+@media (max-width: 700px){
   .nav{display:none;position:absolute;top:72px;right:18px;background:#fff;border:1px solid #eee;box-shadow:var(--shadow);border-radius:12px;padding:10px}
   .nav.open{display:flex;flex-direction:column;gap:10px}
   .burger{display:block}
