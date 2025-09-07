@@ -451,4 +451,118 @@ footer .socials a {
   }
 }
 
+/* === FIX HEADER (final override) === */
+
+/* Контейнер шапки */
+.header, header.site-header, .site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 12px 24px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 2px 10px rgba(0,0,0,.04);
+}
+
+/* ЛОГО / брендовая часть слева */
+.brand, .logo, .brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.brand img, .logo img, .brand-wrap img {
+  height: 32px;
+  width: 32px;
+}
+
+.brand-title, .logo-title, .brand .title, .logo .title {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.08;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: #B9870F; /* благородное золото */
+}
+
+/* Если заголовок обёрнут <a> — наследуем цвет и убираем кликабельность */
+.brand a, .logo a, .brand-title a, .logo-title a {
+  color: inherit !important;
+  text-decoration: none !important;
+  pointer-events: none; /* чтоб не синилось и не кликалось */
+}
+
+/* Навигация справа */
+.nav, .main-nav, .site-nav, nav.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: nowrap;            /* ничего не переносим */
+  white-space: nowrap;          /* «Контакты» в одну строку */
+}
+
+.nav a, .main-nav a, .site-nav a, nav.site-nav a {
+  color: #394150 !important;
+  text-decoration: none !important;
+  font-weight: 600;
+  letter-spacing: .2px;
+  transition: color .2s ease, opacity .2s ease;
+}
+
+.nav a:hover, .main-nav a:hover, .site-nav a:hover {
+  color: #B9870F !important;
+}
+
+/* Кнопка-гамбургер */
+.menu-toggle, .burger, .hamburger {
+  display: none;                 /* по умолчанию скрыт на десктопе */
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,.08);
+  background: #fff;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.menu-toggle svg, .burger svg, .hamburger svg {
+  width: 22px; height: 22px;
+  stroke: #394150;
+}
+
+/* --- Брейкпоинты --- */
+
+/* Планшеты: уменьшаем зазоры в меню */
+@media (max-width: 1180px) {
+  .nav, .main-nav, .site-nav { gap: 14px; }
+}
+
+/* Мобильные: показываем гамбургер и прячем меню */
+@media (max-width: 992px) {
+  .menu-toggle, .burger, .hamburger { display: inline-flex; }
+  .nav, .main-nav, .site-nav { display: none; }
+  /* Активное открытое меню (если у тебя добавляется класс .open) */
+  .nav.open, .main-nav.open, .site-nav.open {
+    position: absolute;
+    top: 64px; right: 16px; left: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 16px 40px rgba(0,0,0,.10);
+    z-index: 60;
+  }
+}
+
+/* Подстраховка: убираем синий дефолт у любых ссылок в хедере */
+.header a:link, .header a:visited,
+.site-header a:link, .site-header a:visited {
+  color: inherit !important;
+  text-decoration: none !important;
+}
 
