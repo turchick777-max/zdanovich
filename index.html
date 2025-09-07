@@ -41,31 +41,38 @@
   <div class="progress" aria-hidden="true"></div>
 
   <!-- HEADER -->
-  <header class="header" id="top">
-    <div class="container header__row">
-      <a class="brand" href="#top" aria-label="На главную">
-        <img class="brand__logo" src="logo-sun.png" alt="Логотип">
-        <span class="brand__text">
-          <span class="brand__main">Доктор Зданович</span>
-          <span class="brand__sub">Мир Благополучия</span>
-        </span>
-      </a>
-      <button class="burger" aria-label="Открыть меню" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="nav" aria-label="Основная навигация">
-        <a href="#about">Обо мне</a>
-        <a href="#services">Услуги</a>
-        <a href="#reviews">Отзывы</a>
-        <a href="#humor">Юмор</a>
-        <a href="#music">Музыка</a>
-        <a href="#literature">Литература</a>
-        <a href="#faq">Вопрос–Ответ</a>
-        <a href="#payment">Оплата</a>
-        <a href="#contacts">Контакты</a>
-      </nav>
-    </div>
-  </header>
+<header class="site-header">
+  <div class="nav-row">
+    <a href="#" class="brand">
+      <!-- твой логотип -->
+      <span class="brand-line">Доктор Зданович</span>
+      <span class="brand-sub">Мир благополучия</span>
+    </a>
+
+    <!-- КНОПКА-БУРГЕР -->
+    <button id="navToggle" class="burger" aria-label="Открыть меню" aria-expanded="false">
+      <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+        <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+
+    <!-- ГОРИЗОНТАЛЬНОЕ МЕНЮ -->
+    <nav class="main-nav" aria-label="Главное меню">
+      <ul class="nav-list">
+        <li><a href="#about">Обо мне</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#reviews">Отзывы</a></li>
+        <li><a href="#humor">Юмор</a></li>
+        <li><a href="#music">Музыка</a></li>
+        <li><a href="#books">Литература</a></li>
+        <li><a href="#qa">Вопрос–Ответ</a></li>
+        <li><a href="#pay">Оплата</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
 
   <!-- HERO -->
   <section class="hero" aria-label="Вступительный блок">
