@@ -748,7 +748,67 @@ footer .socials a {
   height: 3px;
   width: 100%;
   background-color: #6b4c1f; /* цвет линий (под цвет шапки) */
-  border-radius: 2px;
+  border-radius: /* === HEADER: логотип и бургер (жёсткий фикс) === */
+.header .brand__logo {
+  height: 56px !important;   /* ↑ сделает лого заметно крупнее; попробуешь 60-64px, если нужно */
+  width: auto !important;
 }
+
+.burger {
+  display: none;               /* на десктопе скрыт */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.burger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #6b4c1f;         /* цвет полосок под шапку */
+  border-radius: 3px;
+}
+
+/* Навигация по умолчанию — как было */
+.header .nav {
+  display: flex;
+  gap: 24px;
+}
+
+/* Мобильный вид */
+@media (max-width: 900px) {
+  .burger { display: flex !important; }
+
+  .header .nav {
+    display: none !important;        /* прячем пункты, пока меню закрыто */
+    position: absolute;
+    top: 100%;
+    right: 12px;
+    flex-direction: column;
+    gap: 12px;
+    background: #fff;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.12);
+    z-index: 50;
+    min-width: 220px;
+  }
+  .header .nav.open { display: flex !important; }
+
+  .header .nav a {
+    padding: 6px 4px;
+    white-space: nowrap;
+  }
+}
+
+/* Подправим выравнивание контента шапки, чтобы лого + бургер не расползались */
+.header .header__row {
+  align-items: center;
+}
+
 
 
