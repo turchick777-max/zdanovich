@@ -1,0 +1,15 @@
+:root{--bg:#fffdfa;--text:#111827;--muted:#6b7280;--gold1:#D7AD3B;--gold2:#996918;--chip:#fbf3df;--shadow:0 10px 28px rgba(17,24,39,.10)}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.7}
+img{max-width:100%;display:block}
+.container{max-width:1120px;margin:auto;padding:0 18px}
+section{scroll-margin-top:86px}
+.progress{position:fixed;left:0;top:0;height:3px;background:linear-gradient(90deg,var(--gold1),var(--gold2));z-index:60;width:0}
+.brand__main,.brand__sub{font-family:'Playfair Display',serif;font-weight:800;background:linear-gradient(180deg,var(--gold1) 0%, var(--gold2) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:.02em;text-shadow:0 1px 1px rgba(0,0,0,.18)}
+.check li{position:relative;padding-left:28px;margin:10px 0}
+.check li::before{font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;left:0;top:.2em;color:#d97706}
+.check li.heart::before{content:"\f004"}
+.check li.scope::before{content:"\f52e"}
+.check li.dot::before{content:"\f192"}
+.hero{display:grid;grid-template-columns:minmax(480px,1fr) minmax(420px,1fr);gap:32px;align-items:stretch;padding:10px 0 28px}
+@media(max-width:640px){.hero{grid-template-columns:1fr}}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Доктор Зданович — Мир благополучия</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css?v=27">
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container header__row">
+      <a class="brand" href="#top">
+        <img class="brand__logo" src="logo-sun.png" alt="Логотип">
+        <span class="brand__text">
+          <span class="brand__main">Доктор Зданович</span>
+          <span class="brand__sub">Мир благополучия</span>
+        </span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#about">Обо мне</a>
+        <a href="#services">Услуги</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#humor">Юмор</a>
+        <a href="#qa">Q&A</a>
+        <a href="#music">Музыка</a>
+        <a href="#pay">Оплата</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="container hero">
+      <div class="hero__text">
+        <p class="slogan">«Через тернии к людям»</p>
+        <p class="subtitle">Алексей Анатольевич Зданович — врач‑психиатр, психотерапевт, сексолог, супервизор, к.м.н.</p>
+
+        <div class="cta">
+          <a class="btn btn-primary" href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener">
+            <i class="fa-brands fa-telegram"></i> Записаться в Telegram
+          </a>
+          <a class="btn btn-light" href="https://www.b17.ru/doctorzdanovich/" target="_blank" rel="noopener">
+            <i class="fa-solid fa-id-card-clip"></i> Профиль B17
+          </a>
+          <a class="btn" href="#pay">
+            <i class="fa-solid fa-money-bill-wave"></i> Оплатить услугу
+          </a>
+        </div>
+
+        <ul class="chips">
+          <li><i class="fa-solid fa-briefcase"></i> Практика с 1992 года</li>
+          <li><i class="fa-solid fa-video"></i> Онлайн и очно</li>
+          <li><i class="fa-solid fa-binoculars"></i> Супервизии</li>
+        </ul>
+      </div>
+
+      <div class="photo-frame">
+        <img src="hero.jpg" alt="А.А. Зданович">
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <div class="photo-frame"><img src="about.jpg" alt="Обо мне"></div>
+      <div>
+        <h2>Обо мне</h2>
+        <p class="muted">Врач‑психиатр, психотерапевт, сексолог, супервизор, кандидат медицинских наук, более 30 лет опыта.</p>
+        <p><strong>Образование:</strong> Кемеровский государственный медицинский институт («лечебное дело», с 1985 г.); Новокузнецкий ГИУВ («психотерапия», 1992–1997); <em>клиническая ординатура</em>. Повышение квалификации: «Психиатрия», «Сексология», «Психоаналитическое консультирование и психотерапия» (с 2000 г.).</p>
+
+        <ul class="check">
+          <li class="heart">Индивидуальные, семейные, групповые, супружеские занятия</li>
+          <li class="scope">Супервизии с использованием фокусно‑ролевой матрицы</li>
+          <li class="dot">Семинары и вебинары</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
