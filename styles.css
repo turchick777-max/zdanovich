@@ -270,5 +270,73 @@ h2{font-family:'Playfair Display',serif;font-size:1.9rem;margin:0 0 14px}
   .header-inner{ gap: 16px; }
   .nav{ display:none; } /* меню скрывается, работает бургер */
 }
+/* ====== HEADER: не переносить меню, включать бургер вовремя ====== */
+header nav ul { 
+  display: flex !important;
+  gap: 24px !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+header nav a { white-space: nowrap !important; }
+
+@media (max-width: 1240px){
+  header nav ul { gap: 18px !important; }
+  header nav a { font-size: 15px !important; }
+}
+
+/* На 1080px и уже — прячем горизонтальное меню и показываем бургер,
+   даже если классы у тебя другие */
+@media (max-width: 1080px){
+  header nav ul { display: none !important; }
+  .burger, .burger-btn, button[aria-label*="меню" i] { 
+    display: inline-flex !important; 
+  }
+}
+
+/* Чуть прибираем высоту шапки, чтобы не было «ступеньки» сверху */
+header { padding-top: 10px !important; padding-bottom: 8px !important; }
+
+/* ====== CONTACTS: соц-иконки всегда влезают сеткой ====== */
+#contacts .socials, 
+#contacts .icons, 
+#contacts .links, 
+#contacts [class*="social" i],
+footer .socials {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(44px, 1fr)) !important;
+  gap: 12px !important;
+  align-items: center !important;
+  justify-items: center !important;
+  width: 100% !important;
+  margin: 14px 0 18px !important;
+}
+
+#contacts .socials a,
+#contacts .icons a,
+#contacts .links a,
+#contacts [class*="social" i] a,
+footer .socials a {
+  width: 44px !important;
+  height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  background: rgba(255,255,255,.08) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1) !important;
+}
+
+@media (max-width: 420px){
+  #contacts .socials a,
+  #contacts .icons a,
+  #contacts .links a,
+  #contacts [class*="social" i] a,
+  footer .socials a {
+    width: 40px !important; height: 40px !important;
+  }
+}
 
 
