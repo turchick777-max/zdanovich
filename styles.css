@@ -67,7 +67,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #ff
   backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid rgba(0,0,0,.05);padding:10px 0 8px}
 .header__row{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;line-height:1.05}
-.brand__logo{width:32px;height:32px;border-radius:50%;flex:0 0 auto}
+.brand__logo{width:auto;height:50px;border-radius:50%;flex:0 0 auto}
 .brand__text{display:flex;flex-direction:column;align-items:flex-start}
 .brand__main,.brand__sub{
   font-family:'Playfair Display',serif;font-weight:800;
@@ -732,5 +732,23 @@ footer .socials a {
 /* ===== Пример базовых утилок (если нужно) ===== */
 .container{ max-width:1200px; margin:0 auto; padding:0 16px; }
 .progress{ position:fixed; top:0; left:0; height:3px; width:0; background:#b8860b; z-index:1000; }
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #6b4c1f; /* цвет линий (под цвет шапки) */
+  border-radius: 2px;
+}
 
 
