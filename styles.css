@@ -389,6 +389,16 @@ footer .socials a {
 @media (min-width: 1081px){
   .main-nav { overflow: hidden; } /* чтобы не прыгало */
 }
+/* Шапка: держим навигацию в одну строку */
+.site-nav {
+  display: flex;
+  flex-wrap: nowrap;   /* запрещаем перенос */
+  gap: 20px;           /* расстояние между пунктами */
+}
+
+.site-nav a {
+  white-space: nowrap; /* не переносить текст */
+}
 
     width: 40px !important; height: 40px !important;
   }
