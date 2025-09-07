@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
   <link rel="icon" href="logo-sun.png">
-  <link rel="stylesheet" href="styles.css?v=46" />
+  <link rel="stylesheet" href="styles.css?v=47" />
   <script>
     // burger + smooth anchors + progress
     function toggleMenu(){document.querySelector('.nav').classList.toggle('open')}
@@ -39,7 +39,7 @@
   </script>
 </head>
 <body>
-  <div class="progress"></div>
+  <div class="progress" aria-hidden="true"></div>
 
   <!-- HEADER -->
   <header class="header" id="top">
@@ -68,7 +68,7 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" aria-label="Вступительный блок">
     <div class="container hero__grid">
       <div class="hero__text">
         <h1 class="slogan">«Через тернии к людям»</h1>
@@ -76,15 +76,19 @@
           Алексей Анатольевич Зданович — врач-психиатр, психотерапевт, сексолог, супервизор, к.м.н.
         </p>
         <div class="cta">
-          <a class="btn btn-primary" href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener">
+          <a class="btn btn-primary" href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener" aria-label="Записаться в Telegram">
             <i class="fa-brands fa-telegram"></i> Записаться в Telegram
           </a>
-          <a class="btn" href="#payment"><i class="fa-solid fa-qrcode"></i> Оплатить услугу</a>
-          <a class="btn" href="https://www.b17.ru/doctorzdanovich/" target="_blank" rel="noopener"><i class="fa-solid fa-user-doctor"></i> Профиль B17</a>
-          <a class="btn" href="https://profi.ru/profile/ZdanovichAA" target="_blank" rel="noopener"><i class="fa-solid fa-star"></i> Отзывы на Profi</a>
+          <a class="btn" href="#payment" aria-label="Перейти к оплате"><i class="fa-solid fa-qrcode"></i> Оплатить услугу</a>
+          <a class="btn" href="https://www.b17.ru/doctorzdanovich/" target="_blank" rel="noopener" aria-label="Профиль B17">
+            <i class="fa-solid fa-user-doctor"></i> Профиль B17
+          </a>
+          <a class="btn" href="https://profi.ru/profile/ZdanovichAA" target="_blank" rel="noopener" aria-label="Отзывы на Profi.ru">
+            <i class="fa-solid fa-star"></i> Отзывы на Profi
+          </a>
         </div>
 
-        <ul class="tags">
+        <ul class="tags" aria-label="Ключевые факты">
           <li>🟡 Практика с 1992 года</li>
           <li>💻 Онлайн и очно</li>
           <li>🔭 Супервизии</li>
@@ -121,25 +125,80 @@
     <div class="container">
       <h2>Услуги</h2>
 
-      <!-- Витрина TOP-3 -->
-      <div class="highlight-services">
-        <article class="service-card service-card--hero">
-          <h3>✨ Душевный чекап для вас и ваших близких</h3>
-          <p class="lead">Комплексная оценка состояния (сильные стороны, «зоны риска», карта состояния) и рекомендации.</p>
-          <a class="btn btn-primary" href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener">Получить консультацию</a>
-        </article>
+      <!-- Витрина TOP-3 (РАСКРЫВАЕТСЯ) -->
+      <div class="highlight-services" role="list">
+        <details class="service-card service-card--hero" role="listitem" open>
+          <summary>
+            <h3>✨ Душевный чекап для вас и ваших близких</h3>
+            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </summary>
+          <div class="svc__body">
+            <p class="lead">
+              Комплексная оценка эмоционального и психического состояния: сильные стороны, «зоны риска»,
+              подробная карта состояния, рекомендации по качеству жизни и профилактике.
+            </p>
+            <ul class="svc__list">
+              <li>Аналитика текущего состояния и факторов стресса;</li>
+              <li>Выявление рисков и ресурсов, персональная «карта состояния»;</li>
+              <li>Рекомендации по режиму, нагрузкам, психотерапевтическим техникам.</li>
+            </ul>
+            <p class="price-row"><strong>Стоимость:</strong> <span class="price">15 000 ₽</span></p>
+            <div class="svc__cta">
+              <a class="btn btn-primary" href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener">
+                <i class="fa-brands fa-telegram"></i> Получить консультацию
+              </a>
+              <a class="btn btn-light" href="#payment"><i class="fa-solid fa-qrcode"></i> Оплатить по QR</a>
+            </div>
+          </div>
+        </details>
 
-        <article class="service-card service-card--hero">
-          <h3>🎯 Тюнинг личности</h3>
-          <p class="lead">Тонкая настройка навыков под ваши задачи: усиливаем сильные стороны, растим эффективность и устойчивость.</p>
-          <a class="btn btn-primary" href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener">Получить консультацию</a>
-        </article>
+        <details class="service-card service-card--hero" role="listitem">
+          <summary>
+            <h3>🎯 Тюнинг личности</h3>
+            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </summary>
+          <div class="svc__body">
+            <p class="lead">
+              Тонкая настройка навыков и черт под ваши задачи: усиливаем сильные стороны, уменьшаем влияние слабых,
+              повышаем эффективность, устойчивость и уверенность.
+            </p>
+            <ul class="svc__list">
+              <li>Личная стратегия изменений, согласованная с целями;</li>
+              <li>Навыки стресc-менеджмента, коммуникации, саморегуляции;</li>
+              <li>Контроль прогресса и поддержка в внедрении.</li>
+            </ul>
+            <div class="svc__cta">
+              <a class="btn btn-primary" href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener">
+                <i class="fa-brands fa-telegram"></i> Получить консультацию
+              </a>
+              <a class="btn btn-light" href="#payment"><i class="fa-solid fa-qrcode"></i> Оплатить по QR</a>
+            </div>
+          </div>
+        </details>
 
-        <article class="service-card service-card--hero">
-          <h3>🚀 Апгрейд личности</h3>
-          <p class="lead">Глубокая трансформация: преодоление барьеров, раскрытие потенциала, смена ограничивающих сценариев.</p>
-          <a class="btn btn-primary" href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener">Получить консультацию</a>
-        </article>
+        <details class="service-card service-card--hero" role="listitem">
+          <summary>
+            <h3>🚀 Апгрейд личности</h3>
+            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </summary>
+          <div class="svc__body">
+            <p class="lead">
+              Глубокая трансформация: преодоление внутренних барьеров и ограничивающих сценариев,
+              раскрытие потенциала и переход на новый уровень мышления.
+            </p>
+            <ul class="svc__list">
+              <li>Работа с ключевыми убеждениями и установками;</li>
+              <li>Методы анализа и реконструкции сценариев поведения;</li>
+              <li>Формирование устойчивых привычек и мышления роста.</li>
+            </ul>
+            <div class="svc__cta">
+              <a class="btn btn-primary" href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener">
+                <i class="fa-brands fa-telegram"></i> Получить консультацию
+              </a>
+              <a class="btn btn-light" href="#payment"><i class="fa-solid fa-qrcode"></i> Оплатить по QR</a>
+            </div>
+          </div>
+        </details>
       </div>
 
       <!-- Остальные услуги (пример карточек) -->
@@ -176,8 +235,6 @@
       </div>
     </div>
   </section>
-
-  <!-- REVIEWS / HUMOR / MUSIC — оставляю как у тебя (если уже есть контент) -->
 
   <!-- FAQ -->
   <section class="qa" id="faq">
@@ -236,7 +293,7 @@
       <h2>Оплата</h2>
       <p class="muted">Оплата по QR-коду: откройте приложение банка, введите сумму услуги и подтвердите.</p>
       <a class="btn btn-primary" target="_blank" rel="noopener"
-         href="https://qr.nspk.ru/BS1A0076I1KE5JVR973OQDH2BULDV04H?type=01&bank=100000000004&crc=6503">
+         href="https://qr.nspk.ru/BS1A0076I1KE5JVR973OQDH2BULDV04H?type=01&bank=100000000004&crc=6503" aria-label="Оплатить по QR">
          <i class="fa-solid fa-qrcode"></i> Оплатить по QR
       </a>
     </div>
