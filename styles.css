@@ -653,4 +653,84 @@ footer .socials a {
     display: flex;
   }
 }
+/* ====== BASE (предполагается, что уже есть) ====== */
+/* контейнер, сетки, кнопки и т.д. — оставь свой текущий набор */
+
+/* ===== HEADER & NAV (fix: не переносить пункты, бургер на узких) ===== */
+.header {
+  display:flex; align-items:center; justify-content:space-between;
+  background:#fff; padding:12px 30px; box-shadow:0 2px 8px rgba(0,0,0,.05);
+  position:sticky; top:0; z-index:999;
+}
+.brand{ display:flex; align-items:center; text-decoration:none; color:#b8860b; font-family:"Playfair Display",serif; font-weight:700; }
+.brand__logo{ height:40px; margin-right:10px; }
+.brand__text{ display:flex; flex-direction:column; line-height:1.15; }
+.brand__main{ font-size:1.2rem; }
+.brand__sub{ font-size:1rem; font-weight:600; }
+
+.nav{ display:flex; align-items:center; gap:20px; flex-wrap:nowrap; white-space:nowrap; }
+.nav a{ white-space:nowrap; text-decoration:none; color:#333; font-weight:500; transition:color .2s; }
+.nav a:hover{ color:#b8860b; }
+
+.burger{ display:none; width:40px; height:40px; border:1px solid rgba(0,0,0,.08); border-radius:10px; background:#fff; }
+.burger span{ display:block; width:22px; height:2px; background:#333; margin:6px auto; }
+
+@media (max-width:1280px){
+  .nav{ gap:16px; }
+  .nav a{ font-size:15px; }
+}
+@media (max-width:1120px){
+  .burger{ display:block; }
+  .nav{
+    display:none; position:absolute; right:18px; top:72px;
+    flex-direction:column; gap:12px; background:#fff; padding:14px;
+    border-radius:12px; box-shadow:0 12px 28px rgba(0,0,0,.12);
+  }
+  .nav.open{ display:flex; }
+}
+
+/* ===== MUSIC ===== */
+.music{ padding:60px 0; }
+.music h2{ text-align:center; margin-bottom:18px; }
+.music h3{ margin-top:18px; font-size:1.2rem; color:#444; }
+.music-list{ list-style:disc; margin:6px 0 16px 20px; line-height:1.6; }
+
+/* ===== LITERATURE ===== */
+.literature{ padding:70px 0; background:#fafafa; }
+.literature h2{ text-align:center; font-size:2.1rem; margin-bottom:26px; }
+.literature h3{ margin-top:22px; font-size:1.25rem; color:#444; }
+.book-list{ list-style:square; margin:8px 0 18px 20px; line-height:1.6; }
+.book-list li{ margin:6px 0; }
+
+/* ===== FOOTER SOCIALS GRID (чтобы не уезжали на мобилках) ===== */
+#contacts .social, 
+#contacts .socials, 
+.footer .social, 
+.footer .socials{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(44px, 1fr));
+  gap:12px; align-items:center; justify-items:center;
+  width:100%; margin:14px 0 18px;
+}
+#contacts .social a,
+#contacts .socials a,
+.footer .social a,
+.footer .socials a{
+  width:44px; height:44px;
+  display:inline-flex; align-items:center; justify-content:center;
+  border-radius:50%;
+  background:rgba(0,0,0,.04);
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+@media (max-width:420px){
+  #contacts .social a,
+  #contacts .socials a,
+  .footer .social a,
+  .footer .socials a{ width:40px; height:40px; }
+}
+
+/* ===== Пример базовых утилок (если нужно) ===== */
+.container{ max-width:1200px; margin:0 auto; padding:0 16px; }
+.progress{ position:fixed; top:0; left:0; height:3px; width:0; background:#b8860b; z-index:1000; }
+
 
