@@ -164,4 +164,67 @@ h2{font-family:'Playfair Display',serif;font-size:1.9rem;margin:0 0 14px}
 .literature h2 { margin-bottom: 16px; }
 .literature h3 { margin-top: 20px; font-size: 1.2rem; color: var(--accent, #f4a524); }
 .book-list { list-style: square inside; margin: 6px 0 16px; line-height: 1.6; }
+/* ===== HEADER FIX ===== */
+.header { 
+  position: sticky; top: 0; z-index: 50;
+  background: var(--bg, #fffaf3);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+
+.header-inner{
+  max-width: 1200px; margin: 0 auto;
+  padding: 10px 16px;
+  display: flex; align-items: center; gap: 28px;
+}
+
+.brand {
+  display: flex; align-items: center; gap: 12px;
+  flex-shrink: 0;  /* не сжимать логотип */
+}
+
+.brand img.logo { width: 32px; height: 32px; border-radius: 50%; }
+
+.brand .brand-text{
+  display: block; line-height: 1.1; /* было больше — из-за этого «толкало» меню */
+  margin: 0; padding: 0;
+}
+
+.brand .line-1{ 
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem; font-weight: 700;
+  background: linear-gradient(180deg,#b98b18,#7a5a12);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  letter-spacing: .02em;
+}
+.brand .line-2{
+  font-family: "Playfair Display", serif;
+  font-size: 1.05rem; font-weight: 700;
+  color: #7a5a12;
+  letter-spacing: .02em; margin-top: 2px;
+}
+
+/* Навигация в одну строку, с переносом при нехватке ширины */
+.nav{
+  display: flex; flex-wrap: wrap; gap: 22px;
+  align-items: center;
+}
+.nav a{
+  font-size: 0.98rem; color: #495057; text-decoration: none;
+  padding: 6px 0; line-height: 1; transition: opacity .2s, transform .2s;
+}
+.nav a:hover{ opacity: .8; transform: translateY(-1px); }
+
+/* Чуть компактнее на «узких» ноутбуках */
+@media (max-width: 1200px){
+  .nav{ gap: 18px; }
+  .brand .line-1{ font-size: 1.5rem; }
+  .brand .line-2{ font-size: 1rem; }
+}
+
+/* Мобильная шапка (если у тебя есть бургер — это не ломает его) */
+@media (max-width: 900px){
+  .header-inner{ gap: 16px; }
+  .nav{ display:none; } /* меню скрывается, работает бургер */
+}
+
 
