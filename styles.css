@@ -809,6 +809,13 @@ footer .socials a {
 .header .header__row {
   align-items: center;
 }
-
+/* ====== ЛОГОТИП (принудительно) ====== */
+.brand__logo,
+.brand img {
+  display: block !important;
+  height: 72px !important;   /* увеличил, раньше было 56px */
+  width: auto !important;
+  max-height: 80px !important;
+}
 
 
