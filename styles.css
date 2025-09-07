@@ -223,6 +223,50 @@ h2{font-family:'Playfair Display',serif;font-size:1.9rem;margin:0 0 14px}
 
 /* Мобильная шапка (если у тебя есть бургер — это не ломает его) */
 @media (max-width: 900px){
+  /* ========== HOTFIX HEADER (не переносить меню) ========== */
+.header-nav { 
+  display: flex; 
+  align-items: center; 
+  gap: 28px;                 /* чуть меньше расстояние */
+  flex-wrap: nowrap; 
+}
+.header-nav a { white-space: nowrap; }
+
+/* плавно ужимаем меню раньше, чтобы бургер включался вовремя */
+@media (max-width: 1240px){
+  .header-nav { gap: 18px; }
+  .header-nav a { font-size: 15px; }
+}
+
+@media (max-width: 1080px){
+  .header-nav { display: none; }   /* прячем горизонтальное меню */
+  .burger { display: inline-flex; }/* показываем бургер на 1080px и ниже */
+}
+/* ========== HOTFIX FOOTER ICONS (всегда влезают) ========== */
+.contacts .socials,
+.footer .socials,
+#contacts .socials{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(44px, 1fr)); /* авто-колонки */
+  gap: 12px;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  margin: 14px 0 18px;
+}
+
+.socials a, .socials button {
+  width: 44px; height: 44px; 
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+
+@media (max-width: 420px){
+  .socials a, .socials button { width: 40px; height: 40px; } /* на самых узких */
+}
+
   .header-inner{ gap: 16px; }
   .nav{ display:none; } /* меню скрывается, работает бургер */
 }
