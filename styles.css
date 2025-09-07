@@ -335,6 +335,61 @@ footer .socials a {
   #contacts .links a,
   #contacts [class*="social" i] a,
   footer .socials a {
+    /* === HEADER LAYOUT (desktop) === */
+.site-header { position: sticky; top: 0; z-index: 1000; background: #fff; }
+.nav-row {
+  display: flex; align-items: center; gap: 24px;
+  padding: 10px 16px; max-width: 1200px; margin: 0 auto;
+}
+.brand { display: flex; flex-direction: column; text-decoration: none; color: inherit; }
+.brand-line { font-weight: 700; letter-spacing: .5px; }
+.brand-sub  { font-size: .92rem; margin-top: 2px; }
+
+.main-nav { margin-left: auto; } /* меню вправо от бренда */
+
+.nav-list {
+  display: flex; align-items: center; gap: 22px;
+  margin: 0; padding: 0; list-style: none;
+  white-space: nowrap;            /* КЛЮЧ: не переносить */
+}
+.nav-list > li { flex: 0 0 auto; } /* запрет сжатия */
+.nav-list a { text-decoration: none; color: #334155; font-weight: 500; }
+
+/* Кнопка-бургер — нормальный вид, без "черточки" */
+.burger {
+  display: none; /* на десктопе скрыт */
+  width: 40px; height: 40px; border-radius: 10px;
+  border: 1px solid rgba(0,0,0,.08);
+  background: #fff; color: #334155;
+  align-items: center; justify-content: center;
+  padding: 0; cursor: pointer;
+}
+
+/* Чуть ужмем шрифт/отступы, чтобы "Контакты" не падали */
+@media (max-width: 1280px){
+  .nav-list { gap: 16px; }
+  .nav-list a { font-size: 15px; }
+}
+
+/* === MOBILE: показываем бургер, меню прячем === */
+@media (max-width: 1080px){
+  .burger { display: inline-flex; }
+  .main-nav { position: fixed; inset: 64px 0 0 0; /* ниже шапки */
+              background: #ffffff; transform: translateY(-8px);
+              opacity: 0; pointer-events: none; transition: .2s ease; }
+  .main-nav .nav-list{
+    flex-direction: column; gap: 12px; padding: 16px; align-items: flex-start;
+  }
+  .site-header.nav-open .main-nav{
+    transform: translateY(0); opacity: 1; pointer-events: auto;
+  }
+}
+
+/* Небольшая защита: если ширины мало, меню никогда не переносится */
+@media (min-width: 1081px){
+  .main-nav { overflow: hidden; } /* чтобы не прыгало */
+}
+
     width: 40px !important; height: 40px !important;
   }
 }
