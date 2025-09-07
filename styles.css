@@ -813,9 +813,57 @@ footer .socials a {
 .brand__logo,
 .brand img {
   display: block !important;
-  height: 90px !important;   /* увеличил, раньше было 56px */
+  height: 100px !important;   /* увеличил, раньше было 56px */
   width: auto !important;
-  max-height: 80px !important;
+  max-height: 100px !/* ===== HEADER: выравнивание, крупнее логотип, нормальный бургер ===== */
+
+.header .container { display:flex; align-items:center; gap:20px; }
+.brand{display:flex; align-items:center; gap:12px; text-decoration:none}
+.brand__logo{height:80px; width:auto; display:block}        /* <- крупнее логотип */
+.brand__text{line-height:1.1}
+.brand__main{font-size:28px; font-weight:800}
+.brand__sub{font-size:18px; font-weight:700}
+
+/* Бургер */
+.burger{
+  display:none;                 /* desktop прячем */
+  width:44px; height:44px;
+  border:1px solid rgba(0,0,0,.08);
+  border-radius:10px;
+  background:#fff;
+  position:relative;
 }
+.burger span{
+  position:absolute; left:10px; right:10px;
+  height:2px; background:#6b4a1c; border-radius:2px;
+  transition:transform .2s ease, opacity .2s ease;
+}
+.burger span:nth-child(1){top:14px}
+.burger span:nth-child(2){top:21px}
+.burger span:nth-child(3){top:28px}
+
+/* Навигация — ПК */
+.nav{display:flex; gap:28px; align-items:center;}
+
+/* Навигация — мобила (меню «гамбургер») */
+@media (max-width: 900px){
+  .brand__logo{height:72px}         /* на телефонах чуть меньше, но заметно */
+  .brand__main{font-size:24px}
+  .brand__sub{font-size:16px}
+
+  .burger{display:block}
+  .nav{
+    display:none;                    /* по умолчанию скрыто */
+    position:absolute; top:72px; right:12px; left:12px;
+    padding:14px; border-radius:12px;
+    background:#fff;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    flex-direction:column; gap:14px; z-index:40;
+  }
+  .nav.open{display:flex}
+}
+
+/* на всякий случай — чтобы ничего не ломало бургер */
+button.burger, .burger * { pointer-events:auto; }
 
 
