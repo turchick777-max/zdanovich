@@ -565,4 +565,92 @@ footer .socials a {
   color: inherit !important;
   text-decoration: none !important;
 }
+/* --- FIX HEADER + NAV --- */
+
+/* Контейнер хедера */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 12px 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* Бренд (логотип + текст) */
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #b8860b; /* золотой */
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+}
+
+.brand__logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.brand__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand__main {
+  font-size: 1.2rem;
+}
+
+.brand__sub {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Навигация */
+.nav {
+  display: flex;
+  flex-wrap: nowrap;       /* ❗ запрещаем перенос */
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  white-space: nowrap;     /* ❗ всегда в одну строку */
+}
+
+.nav a:hover {
+  color: #b8860b;
+}
+
+/* Бургер */
+.burger {
+  display: none;
+}
+
+/* Мобильный вид */
+@media (max-width: 900px) {
+  .burger {
+    display: block;
+  }
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px; right: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+  }
+  .nav.open {
+    display: flex;
+  }
+}
 
