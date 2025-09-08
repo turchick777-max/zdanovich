@@ -77,30 +77,33 @@
 <body>
   <div class="progress" aria-hidden="true"></div>
 
-  <!-- HEADER -->
-  <header class="header" id="top">
-    <div class="container header__row">
-      <a class="brand" href="#top" aria-label="На главную">
-        <img class="brand__logo" src="logo-sun.png" alt="Логотип">
-        <span class="brand__text">
-          <span class="brand__main">Доктор Зданович</span>
-          <span class="brand__sub">Мир Благополучия</span>
-        </span>
-      </a>
-      <<button class="burger" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button>
-      <nav class="nav" aria-label="Основная навигация">
-        <a href="#about">Обо мне</a>
-        <a href="#services">Услуги</a>
-        <a href="#reviews">Отзывы</a>
-        <a href="#humor">Юмор</a>
-        <a href="#music">Музыка</a>
-        <a href="#literature">Литература</a>
-        <a href="#faq">Вопрос–Ответ</a>
-        <a href="#payment">Оплата</a>
-        <a href="#contacts">Контакты</a>
-      </nav>
-    </div>
-  </header>
+<!-- HEADER -->
+<header class="header" id="top">
+  <div class="container header__row">
+    <a class="brand" href="#top" aria-label="На главную">
+      <img class="brand__logo" src="logo-sun.png" alt="Логотип">
+      <span class="brand__text">
+        <span class="brand__main">Доктор Зданович</span>
+        <span class="brand__sub">Мир Благополучия</span>
+      </span>
+    </a>
+
+    <!-- новая кнопка бургер-меню -->
+    <button class="burger" aria-label="Меню" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button>
+
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="#about">Обо мне</a>
+      <a href="#services">Услуги</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#humor">Юмор</a>
+      <a href="#music">Музыка</a>
+      <a href="#literature">Литература</a>
+      <a href="#faq">Вопрос–Ответ</a>
+      <a href="#payment">Оплата</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </div>
+</header>
 
   <!-- HERO -->
   <section class="hero" aria-label="Вступительный блок">
