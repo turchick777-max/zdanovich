@@ -982,3 +982,17 @@ button.burger, .burger * { pointer-events:auto; }
   margin: 5px 0;
   border-radius: 2px;
 }
+/* --- Portrait frames --- */
+.photo-frame{
+  border: 3px solid #f0d9a1;
+  background: #fff;
+  border-radius: 18px;
+  padding: 8px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.08);
+}
+.photo-frame img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius: 12px;
+}
