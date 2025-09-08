@@ -996,3 +996,44 @@ button.burger, .burger * { pointer-events:auto; }
   height:auto;
   border-radius: 12px;
 }
+/* Бургер-меню */
+.burger-menu {
+  display: none; /* по умолчанию скрыт */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.burger-menu span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #D4AF37; /* золотой */
+  margin: 6px 0;
+  border-radius: 2px;
+}
+
+/* Показывать бургер только на мобилках */
+@media (max-width: 768px) {
+  .burger-menu {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+
+  .nav.open {
+    display: flex;
+  }
+}
