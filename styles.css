@@ -67,7 +67,10 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #ff
   backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid rgba(0,0,0,.05);padding:10px 0 8px}
 .header__row{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;line-height:1.05}
-.brand__logo{width:auto;height:90px;border-radius:50%;flex:0 0 auto}
+.brand__logo {
+  width: 100px;   /* было ~50px */
+  height: 100px;  /* было ~50px */
+}
 .brand__text{display:flex;flex-direction:column;align-items:flex-start}
 .brand__main,.brand__sub{
   font-family:'Playfair Display',serif;font-weight:800;
