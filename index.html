@@ -89,8 +89,11 @@
     </a>
 
     <!-- новая кнопка бургер-меню -->
-    <button class="burger" aria-label="Меню" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button>
-
+    <div class="burger-menu" onclick="toggleMenu()" aria-label="Меню">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
     <nav class="nav" aria-label="Основная навигация">
       <a href="#about">Обо мне</a>
       <a href="#services">Услуги</a>
