@@ -1093,3 +1093,63 @@ button.burger, .burger * { pointer-events:auto; }
 
 /* Logo x2 (для твоего текущего селектора подставь нужный) */
 .brand__logo{ width:96px; height:96px; }     /* было ~48px */
+/* --- базовое позиционирование --- */
+.header, .header .header__row, .header .container { position: relative; }
+
+/* Десктоп: бургер скрыт, меню всегда видно */
+@media (min-width: 769px) {
+  .burger-menu { display: none !important; }
+  .nav {
+    display: flex !important;
+    position: static !important;
+    width: auto !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    flex-direction: row !important;
+    gap: 22px;
+  }
+}
+
+/* Бургер (золотой) */
+.burger-menu {
+  display: none;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  cursor: pointer;
+  z-index: 1001;
+}
+.burger-menu span {
+  display: block;
+  width: 32px;
+  height: 3px;
+  margin: 6px 0;
+  background: #D4AF37; /* золото */
+  border-radius: 2px;
+}
+
+/* Мобильное меню */
+@media (max-width: 768px) {
+  .burger-menu { display: block; }
+  .nav {
+    display: none;
+    position: absolute;
+    top: 64px;
+    right: 12px;
+    width: 240px;
+    padding: 12px;
+    background: #fff;
+    box-shadow: 0 6px 20px rgba(0,0,0,.15);
+    border-radius: 10px;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+  }
+  .nav.open { display: flex; }
+}
+
+/* Логотип в 2 раза больше */
+.brand__logo {
+  width: 96px;
+  height: 96px;
+}
