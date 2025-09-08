@@ -753,8 +753,8 @@ footer .socials a {
   background-color: #6b4c1f; /* цвет линий (под цвет шапки) */
   border-radius: /* === HEADER: логотип и бургер (жёсткий фикс) === */
 .header .brand__logo {
-  height: 56px !important;   /* ↑ сделает лого заметно крупнее; попробуешь 60-64px, если нужно */
-  width: auto !important;
+  height: 96px !important;   /* ↑ сделает лого заметно крупнее; попробуешь 60-64px, если нужно */
+  width: 96px !important;
 }
 
 .burger {
@@ -884,11 +884,11 @@ button.burger, .burger * { pointer-events:auto; }
 }
 /* 1) ЛОГОТИП — увеличиваем в 2 раза, с приоритетом */
 .header .brand__logo {
-  height: 100px !important;   /* было ~50px */
-  width: auto !important;
+  height: 96px !important;   /* было ~50px */
+  width: 96px !important;
 }
 @media (max-width: 768px) {
-  .header .brand__logo { height: 88px !important; }
+  .header .brand__logo { height: 96px !important; }
 }
 
 /* 2) БУРГЕР — рисуем три полоски и задаём цвет */
