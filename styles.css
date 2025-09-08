@@ -879,4 +879,33 @@ button.burger, .burger * { pointer-events:auto; }
   border: none;
   cursor: pointer;
 }
+/* 1) ЛОГОТИП — увеличиваем в 2 раза, с приоритетом */
+.header .brand__logo {
+  height: 100px !important;   /* было ~50px */
+  width: auto !important;
+}
+@media (max-width: 768px) {
+  .header .brand__logo { height: 88px !important; }
+}
 
+/* 2) БУРГЕР — рисуем три полоски и задаём цвет */
+.burger {
+  display: block !important;
+  position: relative;
+  width: 44px;
+  height: 36px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.burger span {
+  position: absolute;
+  left: 6px; right: 6px;
+  height: 3px;
+  background: #a97a2c !important; /* золотистый, как логотип */
+  border-radius: 2px;
+  transition: .2s;
+}
+.burger span:nth-child(1) { top: 10px; }
+.burger span:nth-child(2) { top: 17px; }
+.burger span:nth-child(3) { top: 24px; }
