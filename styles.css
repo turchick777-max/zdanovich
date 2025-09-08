@@ -865,5 +865,18 @@ footer .socials a {
 
 /* на всякий случай — чтобы ничего не ломало бургер */
 button.burger, .burger * { pointer-events:auto; }
+/* Увеличенный логотип */
+.brand__logo {
+  height: 100px !important; /* было 50px */
+  width: auto;
+}
 
+/* Бургер-меню: белый значок ☰ */
+.burger {
+  font-size: 32px;       /* размер побольше */
+  color: #a97a2c;        /* золотистый, как текст логотипа */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
