@@ -932,5 +932,32 @@ button.burger, .burger * { pointer-events:auto; }
 @media (max-width: 768px) {
   .burger-menu { display: block; }
   .nav { display: none; }
+  .nav.open { display: /* Логотип увеличенный */
+.brand__logo {
+  width: 100px;   /* было ~50px */
+  height: auto;
+}
+
+/* Бургер-меню */
+.burger-menu {
+  cursor: pointer;
+  display: none; /* скрыто на десктопе */
+}
+
+.burger-menu span {
+  display: block;
+  width: 32px;
+  height: 4px;
+  background: #D4AF37; /* золотой */
+  margin: 6px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .burger-menu { display: block; }
+  .nav { display: none; }
   .nav.open { display: block; }
 }
+
