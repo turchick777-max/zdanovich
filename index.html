@@ -1,5 +1,40 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="<style>
+/* --- FORCE FIX: логотип крупнее и нормальный бургер --- */
+.header .container{display:flex;align-items:center;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand__logo{height:90px!important;width:auto;display:block} /* КРУПНЕЕ! */
+.brand__text{line-height:1.1}
+.brand__main{font-size:28px;font-weight:800}
+.brand__sub{font-size:18px;font-weight:700}
+
+/* страховка, если класс на картинке другой */
+.header .brand img{height:90px!important;width:auto}
+
+/* навигация desktop */
+.nav{display:flex;gap:28px;align-items:center}
+
+/* бургер */
+.burger{
+  display:none;width:44px;height:44px;border:1px solid rgba(0,0,0,.08);
+  border-radius:10px;background:#fff;position:relative
+}
+.burger span{position:absolute;left:10px;right:10px;height:2px;background:#6b4a1c;border-radius:2px}
+.burger span:nth-child(1){top:14px}
+.burger span:nth-child(2){top:21px}
+.burger span:nth-child(3){top:28px}
+
+/* mobile меню */
+@media (max-width: 900px){
+  .brand__logo, .header .brand img{height:80px!important}
+  .brand__main{font-size:24px}.brand__sub{font-size:16px}
+  .burger{display:block}
+  .nav{display:none!important;position:absolute;top:72px;left:12px;right:12px;
+       padding:14px;border-radius:12px;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.08);
+       flex-direction:column;gap:14px;z-index:40}
+  .nav.open{display:flex!important}
+}
+</style> 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,7 +46,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="icon" href="logo-sun.png">
-  <link rel="stylesheet" href="styles.css?v=56" />
+  <link rel="stylesheet" href="styles.css?v=99" />
 
   <script>
     function toggleMenu(){
