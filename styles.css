@@ -1152,4 +1152,86 @@ button.burger, .burger * { pointer-events:auto; }
 .brand__logo {
   width: 96px;
   height: 96px;
+}/* ===== v27 header fixes (safe override) ===== */
+:root{
+  --logo-size-mobile: 56px;   /* было меньше — x2 от прежнего тип. 28 */
+  --logo-size-desktop: 72px;
+}
+
+/* 1) ЛОГО: увеличить и держать пропорции */
+.header .brand__logo{
+  width: var(--logo-size-mobile) !important;
+  height: var(--logo-size-mobile) !important;
+  object-fit: contain;
+}
+@media (min-width: 1024px){
+  .header .brand__logo{
+    width: var(--logo-size-desktop) !important;
+    height: var(--logo-size-desktop) !important;
+  }
+}
+
+/* базовая высота шапки и относительное позиционирование для бургера */
+.header .header__row{
+  position: relative;
+  min-height: 72px;
+  align-items: center;
+}
+
+/* 2) БУРГЕР: стиль и поведение */
+.burger-menu{
+  display: none;              /* по умолчанию скрыт (десктоп) */
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 28px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  gap: 6px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.burger-menu span{
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #B8860B;        /* «золото» */
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.08);
+}
+
+/* 3) MOBILE: показываем бургер, прячем меню; делаем дропдаун */
+@media (max-width: 991.98px){
+  .burger-menu{ display: flex; }
+  .nav{
+    display: none !important;
+  }
+  .nav.open{
+    display: flex !important;
+    position: absolute;
+    inset: auto 0 0 0;
+    top: 100%;
+    background: #fff;
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(0,0,0,.06);
+    z-index: 20;
+  }
+}
+
+/* 4) DESKTOP: меню — в одну строку, бургер скрыт */
+@media (min-width: 992px){
+  .nav{
+    display: flex !important;
+    position: static !important;
+    flex-direction: row !important;
+    gap: 24px;
+    align-items: center;
+    white-space: nowrap;
+  }
+  .burger-menu{ display: none !important; }
 }
