@@ -1235,3 +1235,21 @@ button.burger, .burger * { pointer-events:auto; }
   }
   .burger-menu{ display: none !important; }
 }
+             /* Увеличиваем главный заголовок и убираем отступ сверху */
+.slogan {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  margin: 0 0 8px;
+  color: #8a5b18;
+  font-weight: 800;
+}
+
+/* Красивый шрифт для девиза */
+.hero .subtitle:first-of-type {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  color: #996918;
+  margin: 8px 0 16px;
+  font-weight: 600;
+}
