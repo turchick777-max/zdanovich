@@ -46,7 +46,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="icon" href="logo-sun.png">
-  <link rel="stylesheet" href="styles.css?v=171" />
+  <link rel="stylesheet" href="styles.css?v=172" />
   <style>
 /* Исправления верстки */
 .hero {
@@ -146,10 +146,10 @@
 </header>
 
 <!-- HERO -->
-  <section class="hero" aria-label="Вступительный блок">
+ <section class="hero" aria-label="Вступительный блок" style="padding-top: 20px;">
     <div class="container hero__grid">
-      <div class="hero__text">
-        <h1 class="slogan">Доктор Зданович и Мир Благополучия</h1>
+     <div class="hero__text">
+  <h1 class="slogan" style="margin-top: 0; padding-top: 0;">Доктор Зданович и Мир Благополучия</h1>
         <p class="subtitle">«Через тернии к людям»</p>
         <p class="subtitle">
           Алексей Анатольевич Зданович — врач-психиатр, психотерапевт, сексолог, супервизор, к.м.н.
@@ -211,8 +211,8 @@
       <h2>Услуги</h2>
 
       <!-- TOP-3 (раскрывающиеся) -->
-      <div class="highlight-services" role="list">
-        <!-- ✨ ЧЕКАП -->
+<div class="highlight-services" role="list" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: start;">
+  <!-- ✨ ЧЕКАП -->
         <details class="service-card service-card--hero" role="listitem" open>
           <summary>
             <h3>✨ Душевный чекап для вас и ваших близких</h3>
