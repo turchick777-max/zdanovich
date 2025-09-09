@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Доктор Зданович — Мир Благополучия</title>
+
+  <!-- Fonts + Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="icon" href="logo-sun.png">
+  <link rel="stylesheet" href="styles.css?v=185" />
+
+  <style>
+  /* Исправления */
+  .slogan {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 2.8rem !important;
+    font-weight: 800 !important;
+    color: #8a5b18 !important;
+    margin: 0 0 12px 0 !important;
+    line-height: 1.2 !important;
+  }
+
+  .subtitle:first-of-type {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 1.4rem !important;
+    font-style: italic !important;
+    color: #996918 !important;
+    margin: 8px 0 16px 0 !important;
+    font-weight: 600 !important;
+  }
+
+  .hero {
+    padding-top: 20px !important;
+  }
+
+  .svc-grid {
+    align-items: flex-start !important;
+  }
+
+  .footer__row {
+    align-items: center !important;
+  }
+
+  .contacts {
+    white-space: nowrap;
+  }
+
+  @media (max-width: 768px) {
+    .slogan {
+      font-size: 2.2rem !important;
+    }
+  }
+    <style>
+/* Исправления */
+.slogan {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 2.8rem !important;
+  font-weight: 800 !important;
+  color: #8a5b18 !important;
+  margin: 0 0 12px 0 !important;
+  line-height: 1.2 !important;
+}
+
+.subtitle:first-of-type {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 1.4rem !important;
+  font-style: italic !important;
+  color: #996918 !important;
+  margin: 8px 0 16px 0 !important;
+  font-weight: 600 !important;
+}
+
+.hero {
+  padding-top: 20px !important;
+}
+
+.svc-grid {
+  align-items: flex-start !important;
+}
+
+.footer__row {
+  align-items: center !important;
+}
+
+.contacts {
+  white-space: nowrap;
+}
+
+/* ДОБАВИТЬ НОВЫЕ СТИЛИ СЮДА: */
+.header__row {
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 8px 0 !important;
+}
+
+.brand__logo {
+  width: 64px !important;
+  height: 64px !important;
+  border-radius: 50% !important;
+}
+
+.nav {
+  display: flex !important;
+  gap: 24px !important;
+  align-items: center !important;
+  margin-left: auto !important;
+}
+
+@media (max-width: 768px) {
+  .slogan {
+    font-size: 2.2rem !important;
+  }
+
+  </style>
+
+  <script>
+    /* removed toggleMenu duplicate */;
+          }
+        });
+      });
+      // прогресс-бар
+      const bar=document.querySelector('.progress');
+      const onScroll=()=>{
+        const h=document.body.scrollHeight-innerHeight;
+        bar.style.width=(Math.max(0, Math.min(1, scrollY/h))*100)+'%';
+      };
+      addEventListener('scroll', onScroll, {passive:true}); onScroll();
+    });
+  </script>
+
+  <script>
+    /* removed toggleMenu duplicate */;
+          }
+        });
+      });
+      // progress bar
+      const bar=document.querySelector('.progress');
+      const onScroll=()=>{
+        const h=document.body.scrollHeight - innerHeight;
+        bar.style.width=(Math.max(0,Math.min(1,scrollY/h))*100)+'%';
+      };
+      addEventListener('scroll', onScroll, {passive:true}); onScroll();
+    });
+  </script>
+</head><body id="top">
+  <div class="progress" aria-hidden="true"></div>
+  <header class="header">
+    <div class="container header__row">
+      <a class="brand" href="#top" aria-label="На главную">
+        <img class="brand__logo" src="logo-sun.png" alt="Логотип">
+        <span class="brand__text">
+          <span class="brand__main">Доктор Зданович</span>
+          <span class="brand__sub">Мир Благополучия</span>
+        </span>
+      </a>
+      <button class="burger" aria-label="Меню" onclick="document.querySelector('.nav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#about">Обо мне</a>
+        <a href="#services">Услуги</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#humor">Юмор</a>
+        <a href="#music">Музыка</a>
+        <a href="#literature">Литература</a>
+        <a href="#faq">Вопрос–Ответ</a>
+        <a href="#payment">Оплата</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+    </div>
+  </header>
+<section class="hero" aria-label="Вступительный блок" style="padding-top: 20px;">
+    <div class="container hero__grid">
+     <div class="hero__text">
+  <h1 class="slogan" style="margin-top: 0; padding-top: 0;">Доктор Зданович<br> и Мир Благополучия</h1>
+        <p class="subtitle">«Через тернии к людям»</p>
+        <p class="subtitle">
+          Алексей Анатольевич Зданович — врач-психиатр, психотерапевт, сексолог, супервизор, к.м.н.
+        </p>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener">
+            <i class="fa-brands fa-telegram"></i> Записаться в Telegram
+          </a>
+          <a class="btn" href="#payment"><i class="fa-solid fa-qrcode"></i> Оплатить услугу</a>
+          <a class="btn" href="https://www.b17.ru/doctorzdanovich/" target="_blank" rel="noopener"><i class="fa-solid fa-user-doctor"></i> Профиль B17</a>
+          <a class="btn" href="https://profi.ru/profile/ZdanovichAA" target="_blank" rel="noopener"><i class="fa-solid fa-star"></i> Отзывы на Profi</a>
+        </div>
+        <ul class="tags" aria-label="Ключевые факты">
+          <li>🟡 Практика с 1992 года</li>
+          <li>💻 Онлайн и очно</li>
+          <li>🔭 Супервизии</li>
+        </ul>
+      </div>
+      <div class="hero__media">
+        <div class="photo-frame"><img src="hero.jpg" alt="Доктор Зданович"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container about__grid">
+      <div class="about__media">
+        <div class="photo-frame"><img src="about.jpg" alt="Алексей Анатольевич Зданович"></div>
+      </div>
+      <div class="about__text">
+       <h2>Обо мне</h2>
+<p>Врач-психиатр, психотерапевт, сексолог, супервизор, кандидат медицинских наук, более 30 лет опыта.</p>
+
+<p><strong>Образование:</strong>
+Кемеровский государственный медицинский институт («лечебное дело», с 1985 г.);
+Новокузнецкий ГИУВ («психотерапия», 1992–1997).
+</p>
+
+<p><strong>Клиническая ординатура:</strong> «Психотерапия», на базе «Новокузнецкого государственного института усовершенствования врачей»,
+по специальностям «Психиатрия», «Сексология», «Психоаналитическое консультирование и психоаналитическая психотерапия»
+с 2000 г. (25 лет).</p>
+
+<p><em>Использую наиболее эффективное сочетание когнитивно-поведенческой и аналитической психотерапий и терапию, фокусированную на переносе.
+Применяю также коучинг и гипнотерапию.</em></p>
+
+<ul class="check">
+  <li class="heart">Индивидуальные, семейные, групповые, супружеские занятия</li>
+  <li class="scope">Супервизии с использованием фокусно-ролевой матрицы</li>
+  <li class="dot">Семинары и вебинары</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <h2>Услуги</h2>
+
+      <!-- TOP-3 (раскрывающиеся) -->
+<div class="highlight-services" role="list" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: start;">
+  <!-- ✨ ЧЕКАП -->
+        <details class="service-card service-card--hero" role="listitem" open>
+          <summary>
+            <h3>✨ Душевный чекап для вас и ваших близких</h3>
+            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </summary>
+          <div class="svc__body">
+            <p class="lead"><strong>Душевный чекап вас и ваших близких.</strong></p>
+
+            <h4>1. Основной</h4>
+            <p>Три консультации по 1 ак. ч., набор тестов (3–5). <strong>Стоимость: 100&nbsp;000&nbsp;₽</strong></p>
+            <ul class="svc__list">
+              <li>Исследование сильных и требующих коррекции сторон (эмоциональные, когнитивные, психофизиологические функции)</li>
+              <li>Исследование баланса в сферах работы, дружбы, любви, отдыха</li>
+              <li>Выявление внутреннего «саботажника»</li>
+              <li>Рекомендации по сохранению, укреплению и развитию качества жизни</li>
+            </ul>
+
+            <h4>2. Семейный</h4>
+            <p>Три–пять консультаций по 1 ак. ч., набор тестов. <strong>Стоимость: 160&nbsp;000 – 300&nbsp;000&nbsp;₽</strong></p>
+            <ul class="svc__list">
+              <li>Исследование супружеских отношений</li>
+              <li>Исследование детско-родительских отношений</li>
+              <li>Исследование душевного здоровья пожилых родственников</li>
+              <li>Рекомендации по сохранению, укреплению и развитию качества жизни</li>
+            </ul>
+
+            <h4>3. Бизнес-чекап</h4>
+            <p>Три консультации по 1 ак. ч. <strong>Стоимость: 200&nbsp;000 – 1&nbsp;500&nbsp;000&nbsp;₽</strong></p>
+            <ul class="svc__list">
+              <li>Исследование стиля управления</li>
+              <li>Анализ эффективности компании</li>
+              <li>Выявление внутренних «саботажников»</li>
+              <li>Рекомендации по изменениям и улучшениям бизнеса</li>
+            </ul>
+
+            <div class="svc__cta">
+              <a class="btn btn-primary" href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener">
+                <i class="fa-brands fa-telegram"></i> Получить консультацию
+              </a>
+              <a class="btn btn-light" href="#payment"><i class="fa-solid fa-qrcode"></i> Оплатить по QR</a>
+            </div>
+          </div>
+        </details>
+
+        <!-- 🎯 ТЮНИНГ -->
+<details class="service-card service-card--hero" role="listitem">
+  <summary>
+    <h3>🎯 Тюнинг личности</h3>
+    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+  </summary>
+  <div class="svc__body">
+    <p class="lead">Тонкая настройка навыков и черт под ваши цели: усиливаем сильные стороны, уменьшаем влияние слабых,
+      повышаем эффективность, стрессоустойчивость и уверенность.</p>
+    <ul class="svc__list">
+      <li>Личная стратегия изменений, согласованная с целями</li>
+      <li>Навыки саморегуляции, коммуникации и стресс-менеджмента</li>
+      <li>Контроль прогресса и поддержка внедрения</li>
+    </ul>
+    <div class="svc__cta">
+      <a class="btn btn-primary" href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener">
+        <i class="fa-brands fa-telegram"></i> Получить консультацию
+      </a>
+      <a class="btn btn-light" href="#payment"><i class="fa-solid fa-qrcode"></i> Оплатить по QR</a>
+    </div>
+  </div>
+</details>
+
+<!-- 🚀 АПГРЕЙД -->
+<details class="service-card service-card--hero" role="listitem">
+  <summary>
+    <h3>🚀 Апгрейд личности</h3>
+    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+  </summary>
+  <div class="svc__body">
+    <p class="lead">Глубокая трансформация: преодоление ограничивающих сценариев, раскрытие потенциала и переход
+      на новый уровень мышления и качества жизни.</p>
+    <ul class="svc__list">
+      <li>Работа с ключевыми убеждениями и автоматическими мыслями</li>
+      <li>Реконструкция сценариев поведения, интеграция опыта</li>
+      <li>Формирование устойчивых привычек и «мышления роста»</li>
+    </ul>
+    <div class="svc__cta">
+      <a class="btn btn-primary" href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener">
+        <i class="fa-brands fa-telegram"></i> Получить консультацию
+      </a>
+      <a class="btn btn-light" href="#payment"><i class="fa-solid fa-qrcode"></i> Оплатить по QR</a>
+    </div>
+  </div>
+</details>
+
+    <!-- Остальные услуги с ценами -->
+    <div class="container">
+      <div class="cards">
+        <article class="card">
+          <h3>Индивидуальная консультация</h3>
+          <p>Кризисы, тревога/фобии, депрессии, нарушения сна, психосоматика, вопросы сексуальности, самооценка.</p>
+          <p class="price">15&nbsp;000&nbsp;₽ / 45&nbsp;мин</p>
+          <div class="card__cta">
+            <a class="btn btn-primary" href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i> Получить консультацию</a>
+            <a class="btn btn-light" href="#payment"><i class="fa-solid fa-qrcode"></i> Оплатить по QR</a>
+          </div>
+        </article>
+        
+        <!-- 🌌 ПСИ-ПУТЕШЕСТВИЯ (раскрывающийся блок) -->
+<details class="service-card service-card--hero" id="psi-travel" role="listitem" open>
+  <summary>
+    <h3>🌌 Пси-путешествия</h3>
+    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+  </summary>
+  <div class="svc__body">
+    <p class="lead">
+      Индивидуальные или групповые погружения в образы и символы под терапевтическим сопровождением:
+      мягкая работа с бессознательным, интеграция опыта, новые инсайты и расширение картины мира.
+    </p>
+
+    <!-- Вставьте сюда полный текст из файла «ВСЕ ПРАВКИ2» (описание пси-путешествий) -->
+    <h4>Как это проходит</h4>
+    <ul class="svc__list">
+      <li>Подготовка: краткая беседа, определение запроса и целей.</li>
+      <li>Погружение: безопасная проводимая визуализация, работа с символами и ощущениями.</li>
+      <li>Интеграция: обсуждение прожитого опыта, фиксация инсайтов и план действий.</li>
+    </ul>
+
+    <h4>Форматы</h4>
+    <ul class="svc__list">
+      <li>Индивидуально — глубокая персональная работа.</li>
+      <li>Группово — поддержка и обмен опытом в безопасном круге.</li>
+    </ul>
+
+    <h4>Показания / ограничения</h4>
+    <ul class="svc__list">
+      <li>Запросы: самопознание, творческие тупики, эмоциональные блоки, смысловые кризисы.</li>
+      <li>Ограничения: острые психические состояния, противопоказания по договорённости с врачом.</li>
+    </ul>
+
+    <p class="price"><strong>Стоимость:</strong> по запросу</p>
+
+    <div class="svc__cta">
+      <a class="btn btn-primary" href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener">
+        <i class="fa-brands fa-telegram"></i> Получить консультацию
+      </a>
+      <a class="btn btn-light" href="#payment"><i class="fa-solid fa-qrcode"></i> Оплатить по QR</a>
+    </div>
+  </div>
+</details>
+
+        <article class="card">
+          <h3>Семейная психотерапия</h3>
+          <p>Конфликты, супружеская терапия, интимная сфера, вопросы воспитания, подростковые сложности.</p>
+          <p class="price">25&nbsp;000&nbsp;₽ / 90&nbsp;мин</p>
+          <div class="card__cta">
+            <a class="btn btn-primary" href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i> Получить консультацию</a>
+            <a class="btn btn-light" href="#payment"><i class="fa-solid fa-qrcode"></i> Оплатить по QR</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Групповая психотерапия</h3>
+          <p>Поддержка, обмен опытом, развитие навыков общения в безопасной среде.</p>
+          <p class="price">4&nbsp;000&nbsp;₽ / 90&nbsp;мин</p>
+          <div class="card__cta">
+            <a class="btn btn-primary" href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i> Получить консультацию</a>
+            <a class="btn btn-light" href="#payment"><i class="fa-solid fa-qrcode"></i> Оплатить по QR</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Коучинг</h3>
+          <p>Поддержка в достижении личных и профессиональных целей, раскрытие потенциала, стратегия действий.</p>
+          <p class="price">25&nbsp;000&nbsp;₽ / 45&nbsp;мин</p>
+          <div class="card__cta">
+            <a class="btn btn-primary" href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i> Получить консультацию</a>
+            <a class="btn btn-light" href="#payment"><i class="fa-solid fa-qrcode"></i> Оплатить по QR</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Супервизия (индивидуальная)</h3>
+          <p>Формат «один на один» для специалистов: разбор случаев, поиск решений, профилактика выгорания.</p>
+          <p class="price">8&nbsp;000&nbsp;₽ / 50&nbsp;мин</p>
+          <div class="card__cta">
+            <a class="btn btn-primary" href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i> Получить консультацию</a>
+            <a class="btn btn-light" href="#payment"><i class="fa-solid fa-qrcode"></i> Оплатить по QR</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Супервизия (групповая)</h3>
+          <p>Совместный разбор случаев, обмен опытом и поддержка коллег в профессиональном сообществе.</p>
+          <p class="price">2&nbsp;000&nbsp;₽ / 90&nbsp;мин</p>
+          <div class="card__cta">
+            <a class="btn btn-primary" href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i> Получить консультацию</a>
+            <a class="btn btn-light" href="#payment"><i class="fa-solid fa-qrcode"></i> Оплатить по QR</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Детская психотерапия</h3>
+          <p>Помощь ребёнку в преодолении тревог и страхов, трудностей в общении и обучении.</p>
+          <p class="price">12&nbsp;000&nbsp;₽ / 45&nbsp;мин</p>
+          <div class="card__cta">
+            <a class="btn btn-primary" href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i> Получить консультацию</a>
+            <a class="btn btn-light" href="#payment"><i class="fa-solid fa-qrcode"></i> Оплатить по QR</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Подростковая психотерапия</h3>
+          <p>Поддержка в период взросления: самооценка, отношения, выбор, стресс и эмоции.</p>
+          <p class="price">14&nbsp;000&nbsp;₽ / 45&nbsp;мин</p>
+          <div class="card__cta">
+            <a class="btn btn-primary" href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i> Получить консультацию</a>
+            <a class="btn btn-light" href="#payment"><i class="fa-solid fa-qrcode"></i> Оплатить по QR</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- REVIEWS -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <h2>Отзывы</h2>
+      <div class="reviews-grid">
+        <article class="review">
+          <p>«После нескольких сеансов могу с уверенностью сказать, что Алексей Анатольевич — чудесный специалист, умеет быстро понять суть проблемы и потребности пациента. Отдельным плюсом считаю его умение быстро найти общий язык с подростком и выстроить грамотные, доверительные отношения. Очень довольна, буду советовать всем знакомым».</p>
+        </article>
+        <article class="review">
+          <p>«После пары первых сессий принял решение о постоянной терапии у А.А. Здановича. Очень опытный специалист, врач по образованию, не играет с мыслями, а действительно помогает работать с проблемами. При необходимости может порекомендовать медикаменты. Превзошёл мои ожидания!»</p>
+        </article>
+        <article class="review">
+          <p>«Очень довольны работой психотерапевта! Причём Алексей Анатольевич понравился и мне, и моему ребёнку. Диалог прошёл позитивно и добродушно. Заботится о состоянии своих пациентов».</p>
+        </article>
+      </div>
+      <div class="reviews-link">
+        <a href="https://profi.ru/profile/ZdanovichAA" target="_blank" rel="noopener">Смотреть больше отзывов на Профи.ру →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HUMOR -->
+  <section class="humor" id="humor">
+    <div class="container">
+      <h2>Юмор</h2>
+      <div class="humor-grid">
+        <figure class="humor-item"><img src="humor-01.jpg" alt="мем 1"></figure>
+        <figure class="humor-item"><img src="humor-02.jpg" alt="мем 2"></figure>
+        <figure class="humor-item"><img src="humor-03.jpg" alt="мем 3"></figure>
+        <figure class="humor-item"><img src="humor-04.jpg" alt="мем 4"></figure>
+        <figure class="humor-item"><img src="humor-05.jpg" alt="мем 5"></figure>
+        <figure class="humor-item"><img src="humor-06.jpg" alt="мем 6"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- MUSIC -->
+  <section class="music" id="music">
+    <div class="container">
+      <h2>Музыка</h2>
+
+      <h3>Для медитации</h3>
+      <ul class="music-list">
+        <li>"Earth Elements" — Cosmic Meditation</li>
+        <li>"Reflection" — Altus</li>
+        <li>"Sankhara" — Serenity Sounds</li>
+      </ul>
+
+      <h3>Для активизации</h3>
+      <ul class="music-list">
+        <li>"Waltz For Debby" — Bill Evans</li>
+        <li>"In A Sentimental Mood" — John Coltrane</li>
+        <li>"Take Five" — Dave Brubeck</li>
+      </ul>
+
+      <h3>Для расслабления</h3>
+      <ul class="music-list">
+        <li>"Following The Footsteps" — Isaac Shepard</li>
+        <li>"Sarabande" — Ludovico Einaudi</li>
+        <li>"Greensleeves" — David Nevue</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- LITERATURE -->
+  <section class="literature" id="literature">
+    <div class="container">
+      <h2>Литература</h2>
+
+      <h3>Для специалистов</h3>
+      <ul class="book-list">
+        <li>«Личность: теории, эксперименты, упражнения» — Роберт Фрейджер, Джеймс Фейдиман</li>
+        <li>Брюс Экер — «Глубинно ориентированная краткосрочная терапия. Как работать краткосрочно в глубинном подходе и наоборот»</li>
+        <li>«Разблокирование эмоционального мозга» — Б. Экер, Р. Тицик, Л. Халли</li>
+      </ul>
+
+      <h3>Для интересующихся</h3>
+      <ul class="book-list">
+        <li>Робин Скиннер, Джон Клиз — «Семья и как в ней уцелеть» и «Жизнь и как в ней выжить»</li>
+        <li>Карл Витакер — «Полночные размышления семейного терапевта»</li>
+        <li>М. Голант, С. Голант — «Если тот, кого вы любите, в депрессии...»</li>
+        <li>Роберт Лихи — «Победи депрессию прежде, чем она победит тебя»</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="qa" id="faq">
+  <div class="container">
+    <h2>Вопрос–Ответ</h2>
+
+    <details open>
+      <summary>Чем психиатр отличается от психотерапевта и психолога?</summary>
+      <ul class="list">
+        <li>🟢 <b>Психиатр</b> — врач с медицинским образованием, ставит диагнозы и назначает лечение, в том числе медикаментозное.</li>
+        <li>🟢 <b>Психотерапевт</b> — врач, работает с психикой с помощью психотерапии (разговорные техники, специальные методы).</li>
+        <li>🟢 <b>Психолог</b> — специалист без медобразования, помогает с личными трудностями, не ставит диагнозов и не назначает лекарства.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>С какими проблемами можно обращаться?</summary>
+      <p>Депрессия, тревожные и панические расстройства, бессонница, психосоматические симптомы, кризисы, трудности в отношениях и сексуальной сфере. Работаю с детьми, подростками и взрослыми.</p>
+    </details>
+
+    <details>
+      <summary>Чем может помочь сексолог?</summary>
+      <p>Помогает при снижении либидо, нарушениях сексуальной функции, страхе близости и сложностях в паре. Цель — восстановить гармонию и уверенность, улучшить качество отношений.</p>
+    </details>
+
+    <details>
+      <summary>Что такое супервизия и кому она нужна?</summary>
+      <p>Профессиональная поддержка специалистов (психологов, психотерапевтов, врачей): разбор случаев, совершенствование навыков, профилактика выгорания. Важная часть развития практикующего терапевта.</p>
+    </details>
+
+    <details>
+      <summary>Вы назначаете лекарства?</summary>
+      <p>Да, как врач-психиатр и психотерапевт могу назначать медикаментозное лечение, если это действительно необходимо. Подход индивидуальный: психотерапия, медикаменты или их сочетание.</p>
+    </details>
+
+    <details>
+      <summary>Как понять, что мне нужна помощь специалиста?</summary>
+      <p>Если сталкиваетесь с тревогой, бессонницей, потерей интереса к жизни, истощением, повторяющимися конфликтами или сексуальными трудностями — это повод обратиться. Чем раньше начать, тем мягче и быстрее восстановление.</p>
+    </details>
+
+    <details>
+      <summary>Как проходит первая консультация?</summary>
+      <p>Знакомство, сбор анамнеза и определение запроса. Обсуждаем вашу ситуацию, выбираем подходящий метод работы и формируем план терапии.</p>
+    </details>
+
+    <details>
+      <summary>Работаете ли вы онлайн?</summary>
+      <p>Да. Доступны очные консультации и онлайн-встречи в удобном и безопасном формате.</p>
+    </details>
+  </div>
+</section>
+
+  <!-- PAYMENT -->
+  <section class="pay" id="payment">
+    <div class="container">
+      <h2>Оплата</h2>
+      <p class="muted">Оплата по QR-коду: откройте приложение банка, введите сумму услуги и подтвердите.</p>
+      <a class="btn btn-primary" target="_blank" rel="noopener"
+         href="https://qr.nspk.ru/BS1A0076I1KE5JVR973OQDH2BULDV04H?type=01&bank=100000000004&crc=6503">
+         <i class="fa-solid fa-qrcode"></i> Оплатить по QR
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER / CONTACTS -->
+  <footer class="footer" id="contacts">
+    <div class="container footer__row">
+      <div class="contacts">
+        <strong>Контакты</strong>
+        <p>Тел.: <a href="tel:+79267995927">+7 926 799-59-27</a></p>
+        <p><a href="https://t.me/DrZdanovichPsy" target="_blank" rel="noopener">Написать в Telegram</a></p>
+      </div>
+      <div class="social socials" aria-label="Социальные сети">
+        <a href="https://www.b17.ru/doctorzdanovich/" target="_blank" rel="noopener" aria-label="B17"><i class="fa-solid fa-user-doctor"></i></a>
+        <a href="https://vk.com/shkoladocrorazdanovicha" target="_blank" rel="noopener" aria-label="VK"><i class="fa-brands fa-vk"></i></a>
+        <a href="https://rutube.ru/channel/34639458/" target="_blank" rel="noopener" aria-label="RuTube"><i class="fa-solid fa-video"></i></a>
+        <a href="https://t.me/psyclub_svobodnyeassociations" target="_blank" rel="noopener" aria-label="Telegram club"><i class="fa-brands fa-telegram"></i></a>
+        <a href="https://ok.ru/group70000006131752" target="_blank" rel="noopener" aria-label="Одноклассники"><i class="fa-brands fa-odnoklassniki"></i></a>
+        <a href="https://yappy.media/profile" target="_blank" rel="noopener" aria-label="Yappy"><i class="fa-solid fa-link"></i></a>
+        <a href="https://tenchat.ru/4868340" target="_blank" rel="noopener" aria-label="TenChat"><i class="fa-solid fa-link"></i></a>
+        <a href="https://www.instagram.com/dr.aleksey.zdanovich?utm_source=qr&igsh=MWVqY2Z3djZhdWp0Yg==" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://dzen.ru/drzdanovich?share_to=link" target="_blank" rel="noopener" aria-label="Дзен"><i class="fa-solid fa-rss"></i></a>
+        <a href="https://profi.ru/profile/ZdanovichAA" target="_blank" rel="noopener" aria-label="Profi.ru"><i class="fa-solid fa-star"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
