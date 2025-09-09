@@ -1,44 +1,8 @@
 <!DOCTYPE html>
-<html lang="<style>
-/* --- FORCE FIX: логотип крупнее и нормальный бургер --- */
-.header .container{display:flex;align-items:center;gap:20px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand__logo{height:90px!important;width:auto;display:block} /* КРУПНЕЕ! */
-.brand__text{line-height:1.1}
-.brand__main{font-size:28px;font-weight:800}
-.brand__sub{font-size:18px;font-weight:700}
-
-/* страховка, если класс на картинке другой */
-.header .brand img{height:90px!important;width:auto}
-
-/* навигация desktop */
-.nav{display:flex;gap:28px;align-items:center}
-
-/* бургер */
-.burger{
-  display:none;width:44px;height:44px;border:1px solid rgba(0,0,0,.08);
-  border-radius:10px;background:#fff;position:relative
-}
-.burger span{position:absolute;left:10px;right:10px;height:2px;background:#6b4a1c;border-radius:2px}
-.burger span:nth-child(1){top:14px}
-.burger span:nth-child(2){top:21px}
-.burger span:nth-child(3){top:28px}
-
-/* mobile меню */
-@media (max-width: 900px){
-  .brand__logo, .header .brand img{height:80px!important}
-  .brand__main{font-size:24px}.brand__sub{font-size:16px}
-  .burger{display:block}
-  .nav{display:none!important;position:absolute;top:72px;left:12px;right:12px;
-       padding:14px;border-radius:12px;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.08);
-       flex-direction:column;gap:14px;z-index:40}
-  .nav.open{display:flex!important}
-}
-
+<html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Доктор Зданович — Мир Благополучия</title>
 
   <!-- Fonts + Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,190 +10,37 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="icon" href="logo-sun.png">
-  <link rel="stylesheet" href="styles.css?v=188" />
-
-  <style>
-  /* Исправления */
-  .slogan {
-    font-family: 'Playfair Display', serif !important;
-    font-size: 2.8rem !important;
-    font-weight: 800 !important;
-    color: #8a5b18 !important;
-    margin: 0 0 12px 0 !important;
-    line-height: 1.2 !important;
-  }
-
-  .subtitle:first-of-type {
-    font-family: 'Playfair Display', serif !important;
-    font-size: 1.4rem !important;
-    font-style: italic !important;
-    color: #996918 !important;
-    margin: 8px 0 16px 0 !important;
-    font-weight: 600 !important;
-  }
-
-  .hero {
-    padding-top: 20px !important;
-  }
-
-  .svc-grid {
-    align-items: flex-start !important;
-  }
-
-  .footer__row {
-    align-items: center !important;
-  }
-
-  .contacts {
-    white-space: nowrap;
-  }
-
-  @media (max-width: 768px) {
-    .slogan {
-      font-size: 2.2rem !important;
-    }
-  }
-    <style>
-/* Исправления */
-.slogan {
-  font-family: 'Playfair Display', serif !important;
-  font-size: 2.8rem !important;
-  font-weight: 800 !important;
-  color: #8a5b18 !important;
-  margin: 0 0 12px 0 !important;
-  line-height: 1.2 !important;
-}
-
-.subtitle:first-of-type {
-  font-family: 'Playfair Display', serif !important;
-  font-size: 1.4rem !important;
-  font-style: italic !important;
-  color: #996918 !important;
-  margin: 8px 0 16px 0 !important;
-  font-weight: 600 !important;
-}
-
-.hero {
-  padding-top: 20px !important;
-}
-
-.svc-grid {
-  align-items: flex-start !important;
-}
-
-.footer__row {
-  align-items: center !important;
-}
-
-.contacts {
-  white-space: nowrap;
-}
-
-/* ДОБАВИТЬ НОВЫЕ СТИЛИ СЮДА: */
-.header__row {
-  justify-content: space-between !important;
-  align-items: center !important;
-  padding: 8px 0 !important;
-}
-
-.brand__logo {
-  width: 64px !important;
-  height: 64px !important;
-  border-radius: 50% !important;
-}
-
-.nav {
-  display: flex !important;
-  gap: 24px !important;
-  align-items: center !important;
-  margin-left: auto !important;
-}
-
-@media (max-width: 768px) {
-  .slogan {
-    font-size: 2.2rem !important;
-  }
-
-  </style>
-
-  <script>
-    function toggleMenu(){
-      document.querySelector('.nav').classList.toggle('open');
-    }
-    document.addEventListener('DOMContentLoaded', ()=>{
-      // плавный скролл
-      document.querySelectorAll('a[href^="#"]').forEach(a=>{
-        a.addEventListener('click', e=>{
-          const id=a.getAttribute('href');
-          if(id && id.length>1 && document.querySelector(id)){
-            e.preventDefault();
-            document.querySelector('.nav').classList.remove('open');
-            document.querySelector(id).scrollIntoView({behavior:'smooth', block:'start'});
-          }
-        });
-      });
-      // прогресс-бар
-      const bar=document.querySelector('.progress');
-      const onScroll=()=>{
-        const h=document.body.scrollHeight-innerHeight;
-        bar.style.width=(Math.max(0, Math.min(1, scrollY/h))*100)+'%';
-      };
-      addEventListener('scroll', onScroll, {passive:true}); onScroll();
-    });
-  </script>
-
-  <script>
-    function toggleMenu(){
-      document.querySelector('.nav').classList.toggle('open')
-    }
-    document.addEventListener('DOMContentLoaded', ()=>{
-      // smooth anchors
-      document.querySelectorAll('a[href^="#"]').forEach(a=>{
-        a.addEventListener('click', e=>{
-          const id=a.getAttribute('href');
-          if(id && id.length>1 && document.querySelector(id)){
-            e.preventDefault();
-            document.querySelector('.nav').classList.remove('open');
-            document.querySelector(id).scrollIntoView({behavior:'smooth', block:'start'});
-          }
-        });
-      });
-      // progress bar
-      const bar=document.querySelector('.progress');
-      const onScroll=()=>{
-        const h=document.body.scrollHeight - innerHeight;
-        bar.style.width=(Math.max(0,Math.min(1,scrollY/h))*100)+'%';
-      };
-      addEventListener('scroll', onScroll, {passive:true}); onScroll();
-    });
-  </script>
+  <link rel="stylesheet" href="styles.css?v=189">
 </head>
-<body>
+<body id="top">
   <div class="progress" aria-hidden="true"></div>
 
-<!-- HEADER -->
-<a class="brand" href="#top" aria-label="На главную">
-  <img class="brand__logo" src="logo-sun.png" alt="Логотип">
-</a>
+  <header class="header">
+    <div class="container header__row">
+      <a class="brand" href="#top" aria-label="На главную">
+        <img class="brand__logo" src="logo-sun.png" alt="Логотип">
+        <span class="brand__text">
+   
+        </span>
+      </a>
 
-  <!-- BURGER (mobile only) -->
-<button class="burger" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="Меню">
-  <span></span><span></span><span></span>
-</button>
-    <!-- Навигация -->
-    <nav class="nav" aria-label="Основная навигация">
-      <a href="#about">Обо мне</a>
-      <a href="#services">Услуги</a>
-      <a href="#reviews">Отзывы</a>
-      <a href="#humor">Юмор</a>
-      <a href="#music">Музыка</a>
-      <a href="#literature">Литература</a>
-      <a href="#faq">Вопрос–Ответ</a>
-      <a href="#payment">Оплата</a>
-      <a href="#contacts">Контакты</a>
-    </nav>
-  </div>
-</header>
+      <button class="burger" aria-label="Меню" onclick="document.querySelector('.nav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#about">Обо мне</a>
+        <a href="#services">Услуги</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#humor">Юмор</a>
+        <a href="#music">Музыка</a>
+        <a href="#literature">Литература</a>
+        <a href="#faq">Вопрос–Ответ</a>
+        <a href="#payment">Оплата</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+    </div>
+  </header>
 
 <!-- HERO -->
  <section class="hero" aria-label="Вступительный блок" style="padding-top: 20px;">
