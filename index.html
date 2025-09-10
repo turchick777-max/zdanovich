@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="icon" href="logo-sun.png">
-  <link rel="stylesheet" href="styles.css?v=198" />
+  <link rel="stylesheet" href="styles.css?v=199" />
 
   <style>
   /* Исправления */
@@ -116,33 +116,20 @@
 
   </style>
 
-  <script>
-    /* removed toggleMenu duplicate */;
-          }
+ <script>
+    function toggleMenu(){document.querySelector('.nav').classList.toggle('open')}
+    document.addEventListener('DOMContentLoaded', ()=>{
+      document.querySelectorAll('a[href^="#"]').forEach(a=>{
+        a.addEventListener('click', e=>{
+          const id=a.getAttribute('href');
+          if(id.length>1){ e.preventDefault(); document.querySelector('.nav').classList.remove('open'); document.querySelector(id)?.scrollIntoView({behavior:'smooth',block:'start'});}
         });
       });
-      // прогресс-бар
       const bar=document.querySelector('.progress');
-      const onScroll=()=>{
+      addEventListener('scroll', ()=>{
         const h=document.body.scrollHeight-innerHeight;
         bar.style.width=(Math.max(0, Math.min(1, scrollY/h))*100)+'%';
-      };
-      addEventListener('scroll', onScroll, {passive:true}); onScroll();
-    });
-  </script>
-
-  <script>
-    /* removed toggleMenu duplicate */;
-          }
-        });
       });
-      // progress bar
-      const bar=document.querySelector('.progress');
-      const onScroll=()=>{
-        const h=document.body.scrollHeight - innerHeight;
-        bar.style.width=(Math.max(0,Math.min(1,scrollY/h))*100)+'%';
-      };
-      addEventListener('scroll', onScroll, {passive:true}); onScroll();
     });
   </script>
 </head><body id="top">
@@ -153,11 +140,9 @@
         <img class="brand__logo" src="logo-sun.png" alt="Логотип">
         <span class="brand__text">
         </span>
-      </a>
-      <button class="burger" aria-label="Меню" onclick="document.querySelector('.nav').classList.toggle('open')">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="nav" aria-label="Основная навигация">
+    </a>
+      <button class="burger" aria-label="Меню" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+      <nav class="nav">
         <a href="#about">Обо мне</a>
         <a href="#services">Услуги</a>
         <a href="#reviews">Отзывы</a>
