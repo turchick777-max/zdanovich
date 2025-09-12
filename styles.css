@@ -1423,29 +1423,3 @@ button.burger, .burger * { pointer-events:auto; }
   }
   .burger span + span{ margin-top: 5px; }
 }
-/* по умолчанию бургер скрыт (десктоп) */
-.burger { display: none; }
-
-/* мобильный режим */
-@media (max-width: 1080px){
-  /* Скрываем горизонтальную навигацию (поддержим оба класса на всякий) */
-  .nav, .header-nav { display: none !important; }
-
-  /* Показываем и позиционируем бургер */
-  .header .container { position: relative; } /* чтобы absolute был от шапки */
-  .burger{
-    display: inline-flex !important;
-    position: absolute; top: 18px; right: 12px;
-    width: 40px; height: 40px;
-    align-items: center; justify-content: center;
-    border: 1px solid #f1e2bf; border-radius: 10px;
-    background: #fff; box-shadow: var(--shadow);
-    z-index: 1001; cursor: pointer;
-  }
-  .burger span{
-    display:block; width:22px; height:2px;
-    background:#1f2937; border-radius:2px;
-  }
-  .burger span + span{ margin-top:5px; }
-}
-
