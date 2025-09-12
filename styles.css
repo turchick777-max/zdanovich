@@ -1401,4 +1401,26 @@ button.burger, .burger * { pointer-events:auto; }
     display: flex !important;
   }
 }
+/* Бургер по умолчанию скрыт */
+.burger { display: none; }
+
+/* На мобильных показываем и позиционируем в шапке */
+@media (max-width: 900px){
+  .header .container { position: relative; }  /* чтобы абсолют работал относительно шапки */
+
+  .burger{
+    position: absolute; top: 18px; right: 18px;
+    display: inline-flex;
+    width: 40px; height: 40px;
+    align-items: center; justify-content: center;
+    border: 1px solid #f1e2bf; border-radius: 10px;
+    background: #fff; box-shadow: var(--shadow);
+    z-index: 1001; cursor: pointer;
+  }
+  .burger span{
+    display: block; width: 22px; height: 2px;
+    background: #1f2937; border-radius: 2px;
+  }
+  .burger span + span{ margin-top: 5px; }
+}
 
