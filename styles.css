@@ -102,8 +102,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #ff
 .tags{list-style:none;padding:0;margin:12px 0;display:flex;gap:12px;flex-wrap:wrap}
 .tags li{background:#fff7e3;border:1px solid #f1e2bf;padding:8px 12px;border-radius:999px;white-space:nowrap}
 .photo-frame {
-  background: #fff;
-  border: 3px solid var(--gold1); /* или используйте конкретный цвет, например #D7AD3B */
+  border: 3px solid var(--gold1); /* золотая рамка */
+  background: #fff8e7;            /* тёплый золотисто-бежевый фон */
   border-radius: 18px;
   padding: 10px;
   box-shadow: var(--shadow);
@@ -1014,11 +1014,11 @@ button.burger, .burger * { pointer-events:auto; }
 }
 /* --- Portrait frames --- */
 .photo-frame {
-  border: 3px solid var(--gold1);
-  background: #fff;
+  border: 3px solid var(--gold1); /* золотая рамка */
+  background: #fff8e7;            /* тёплый золотисто-бежевый фон */
   border-radius: 18px;
-  padding: 8px;
-  box-shadow: 0 6px 24px rgba(0,0,0,.08);
+  padding: 10px;
+  box-shadow: var(--shadow);
 }
 .photo-frame img{
   display:block;
