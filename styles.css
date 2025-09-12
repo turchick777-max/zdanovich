@@ -1374,3 +1374,31 @@ button.burger, .burger * { pointer-events:auto; }
   color:#8a5b18 !important;
   margin:6px 0 18px 0 !important;
 }
+             /* ===== MOBILE NAV — авторитетный блок (только для телефонов) ===== */
+@media (max-width: 900px){
+  /* показываем кнопку-бургер */
+  .burger{
+    display: inline-flex !important;
+    align-items: center; justify-content: center;
+    width: 40px; height: 40px;
+    border: 1px solid rgba(0,0,0,.08);
+    border-radius: 10px; background: #fff; cursor: pointer;
+    z-index: 1001;
+  }
+
+  /* меню по умолчанию скрыто */
+  .header .nav, .nav{
+    display: none !important;
+    position: absolute; top: 92px; right: 12px; left: 12px;
+    flex-direction: column; gap: 12px;
+    background: #fff; padding: 14px;
+    border-radius: 12px; box-shadow: 0 12px 28px rgba(0,0,0,.12);
+    z-index: 1000; min-width: 220px;
+  }
+
+  /* только при .open показываем список */
+  .header .nav.open, .nav.open{
+    display: flex !important;
+  }
+}
+
