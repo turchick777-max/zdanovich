@@ -319,7 +319,7 @@ h2{font-family:'Playfair Display',serif;font-size:1.9rem;margin:0 0 14px}
 }
 
 @media (max-width: 1080px){
-  .header-nav { display: none; }   /* прячем горизонтальное меню */
+  .nav { display: none; }   /* прячем горизонтальное меню */
   .burger { display: inline-flex; }/* показываем бургер на 1080px и ниже */
 }
 /* ========== HOTFIX FOOTER ICONS (всегда влезают) ========== */
@@ -1423,3 +1423,8 @@ button.burger, .burger * { pointer-events:auto; }
   }
   .burger span + span{ margin-top: 5px; }
 }
+             @media (max-width: 1080px){
+  .nav { display: none !important; }
+  .burger { display: inline-flex !important; }
+}
+
